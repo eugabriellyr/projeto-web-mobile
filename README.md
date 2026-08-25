@@ -10,7 +10,10 @@ Site institucional e portfólio profissional desenvolvido para uma advogada em i
 É usar a tecnologia para apoiar o início de carreira da advogada e ajudar pequenos empreendedores. O site facilita o acesso direto à profissional e explica os direitos de quem está começando um negócio com palavras simples, sem complicação.
 
 ## Protótipo 
-**<img src="20260825_202058.jpg" alt="Foto Desktop" width="250">**
+<p>
+  <img src="20260825_202058.jpg" width="250" alt="Foto 1">
+  <img src="Screenshot_20260825_202732_Drive.jpg" width="250" alt="Print Drive">
+</p>
 
 
 ## ✨ Integrantes
