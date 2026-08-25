@@ -12,7 +12,7 @@ Site institucional e portfólio profissional desenvolvido para uma advogada em i
 ## Protótipo 
 <p>
   <img src="20260825_202058.jpg" width="250" alt="Foto 1">
-  <img src="Screenshot_20260825_202732_Drive.jpg" width="250" alt="Print Drive">
+  <img src="20260825_203114.jpg" width="250" alt="Print Drive">
 </p>
 
 
