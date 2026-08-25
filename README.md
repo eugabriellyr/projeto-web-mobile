@@ -1,11 +1,13 @@
 # ⚖️ Portifólio Jurídico
 
-Site institucional e portfólio profissional desenvolvido para uma advogada em início de carreira, com o objetivo de divulgar seus serviços, construir presença digital e oferecer conteúdos informativos sobre direitos para a comunidade.
+Site institucional e portfólio profissional desenvolvido para uma advogada em início de carreira, com o objetivo de divulgar seus serviços, construir presença digital e oferecer conteúdos informativos sobre direitos.
 
 ## 🚀 Objetivos
 - **Divulgação Profissional:** Apresentar a trajetória e as áreas de atuação da advogada.
-- **Ajuda à Comunidade:** Disponibilizar artigos simples explicando direitos básicos do cidadão.
 - **Atendimento Fácil:** Facilitar o contato de clientes via WhatsApp e formulário.
+
+## Caráter Extensionista 
+É usar a tecnologia para apoiar o início de carreira da advogada e ajudar pequenos empreendedores. O site facilita o acesso direto à profissional e explica os direitos de quem está começando um negócio com palavras simples, sem complicação.
 
 ## ✨ Integrantes
 - Gabrielly Nogueira Rodrigues (10762966)
