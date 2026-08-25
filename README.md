@@ -16,7 +16,7 @@ Partindo da ideia de criar um site para a prima da Natália — uma advogada em 
 
 Estrutura da Página
 
-- Início (Hero Section): Nome, foto profissional e área de atuação principal.
+- Início: Nome, foto profissional e área de atuação principal.
 - Sobre Mim: Formação, valores e trajetória acadêmica.
 - Áreas de Atuação: Resumo dos serviços prestados (ex.: Direito Civil, Trabalhista).
 - Contato: Formulário simples, links de redes sociais e botão para o WhatsApp.
