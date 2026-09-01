@@ -30,7 +30,7 @@ Validação do Formulário: Checagem dinâmica de e-mail e telefone antes do env
 
 ## Protótipo 
 <p>
-  <img src="20260825_202058.jpg" width="250" alt="Foto 1">
+  <img src="MainPage.png" width="250" alt="Foto 1">
   <img src="20260825_203114.jpg" width="250" alt="Print Drive">
 </p>
 
