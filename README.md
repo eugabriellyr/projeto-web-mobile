@@ -155,8 +155,11 @@ O cabeçalho contém o logotipo, os links principais de navegação e o botão p
         <a href="#" class="botao_consulta">Consulta</a>
     </nav>
 </header>
+```
 
+**####2. Sessão Principal: sobre a advogada**
 
+```html
 <main>
     <section class="sobre">
         <article class="sobre_texto">
@@ -187,8 +190,7 @@ O cabeçalho contém o logotipo, os links principais de navegação e o botão p
     </article>
 
 </section>
-
-
+``` 
 ---
 
 ## ✨ Integrantes
