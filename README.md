@@ -157,7 +157,7 @@ O cabeçalho contém o logotipo, os links principais de navegação e o botão p
 </header>
 ```
 
-**####2. Sessão Principal: sobre a advogada**
+**2. Sessão Principal: sobre a advogada**
 
 ```html
 <main>
