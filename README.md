@@ -156,7 +156,7 @@ O cabeçalho contém o logotipo, os links principais de navegação e o botão p
     </nav>
 </header>
 
-#### 2. Principal: Sobre a Advogada (`<header>` e `<nav>`)
+
 <main>
     <section class="sobre">
         <article class="sobre_texto">
