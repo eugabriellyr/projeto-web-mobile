@@ -114,6 +114,80 @@ A página principal (`index.html`) foi estruturada utilizando **HTML5 Semântico
   </section>
 </footer>
 ```
+## Tutorial e Estrutura Sobre
+
+A página Sobre (`sobre.html`) foi estruturada utilizando **HTML5 Semântico**, garantindo uma organização clara do conteúdo, acessibilidade, facilidade de manutenção e boa indexação (SEO).
+
+### Tags HTML Utilizadas
+
+- `<header>` e `<nav>`: Organização do cabeçalho e do menu principal de navegação.
+- `<main>`: Agrupamento de todo o conteúdo principal e exclusivo da página.
+- `<section>`: Divisão das áreas temáticas da página, como apresentação da advogada, estatísticas e áreas de atuação.
+- `<article>`: Utilizado para conteúdos independentes, como informações sobre a advogada, estatísticas e cards das áreas de atuação.
+- `<figure>` e `<img>`: Exibição semântica da imagem da advogada e dos ícones das áreas de atuação, utilizando o atributo `alt` para acessibilidade.
+- `<h1>` e `<h2>`: Organização hierárquica dos títulos e subtítulos da página.
+- `<p>`: Apresentação dos textos descritivos e informações institucionais.
+- `<strong>`: Destaque dos valores das estatísticas, como quantidade de casos resolvidos e anos de carreira.
+- `<span>`: Complementação das informações apresentadas nas estatísticas.
+- `<ul>` e `<li>`: Organização das listas de links de navegação do cabeçalho e rodapé.
+- `<address>`: Exibição semântica dos dados de contato, como telefone, e-mail e localização.
+- `<footer>`: Rodapé da página contendo informações institucionais, navegação, contato, atendimento e redes sociais.
+
+---
+
+### Trechos Resumidos do Código
+
+#### 1. Cabeçalho e Menu de Navegação (`<header>` e `<nav>`)
+
+O cabeçalho contém o logotipo, os links principais de navegação e o botão para consulta.
+
+```html
+<header>
+    <nav class="menu">
+        <a href="#" class="logo">Logo</a>
+
+        <ul class="nav_links">
+            <li><a href="inicio.html">Home</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+
+        <a href="#" class="botao_consulta">Consulta</a>
+    </nav>
+</header>
+
+#### 2. Principal: Sobre a Advogada (`<header>` e `<nav>`)
+<main>
+    <section class="sobre">
+        <article class="sobre_texto">
+            <h1 class="sobre_titulo">Sobre a Dr. Tal</h1>
+
+            <p class="sobre_descricao">
+                Atuação jurídica pautada pela ética, dedicação e
+                compromisso com cada cliente. Advogada Tal oferece
+                orientação personalizada e soluções estratégicas para
+                proteger seus direitos e interesses.
+            </p>
+
+            <a href="#" class="botao_contato">Contato</a>
+        </article>
+    </section>
+</main>
+
+<section class="estatisticas">
+
+    <article class="estatistica">
+        <strong>+100</strong>
+        <span>Casos resolvidos</span>
+    </article>
+
+    <article class="estatistica">
+        <strong>5</strong>
+        <span>Anos de carreira</span>
+    </article>
+
+</section>
+
 
 ---
 
