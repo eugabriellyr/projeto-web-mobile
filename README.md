@@ -191,7 +191,164 @@ O cabeçalho contém o logotipo, os links principais de navegação e o botão p
 
 </section>
 ``` 
+
+## Tutorial e Estrutura Contato
+
+A página de Contato (`contato.html`) foi estruturada utilizando **HTML5 Semântico**, focando na usabilidade e interatividade para facilitar o agendamento de consultas e o acesso rápido aos canais de atendimento da advogada, garantindo também acessibilidade e boa indexação (SEO).
+
+### Tags HTML Utilizadas
+
+* `<header>` e `<nav>`: Organização do cabeçalho e dos links de navegação principal.
+* `<section>`: Divisão das grandes áreas da página, como o banner introdutório (Hero) e a sessão principal de contato.
+* `<main>`: Agrupamento do conteúdo central, englobando as informações de atendimento e o formulário.
+* `<h1>`, `<h2>` e `<h3>`: Organização hierárquica dos títulos, facilitando a leitura estrutural da página.
+* `<img>`: Exibição de imagens de fundo e ícones de contato/redes sociais, acompanhadas do atributo `alt` para acessibilidade.
+* `<form>`, `<input>`, `<textarea>` e `<button>`: Elementos estruturais essenciais para a criação do formulário interativo de agendamento, permitindo a coleta de dados do usuário (nome, e-mail, telefone, data e mensagem).
+* `<i>`: Utilizado em conjunto com a biblioteca FontAwesome para a inserção de ícones vetoriais nos campos do formulário.
+* `<address>`: Elemento semântico para exibição oficial dos dados de contato (telefone, e-mail e localização).
+* `<footer>`: Rodapé da página contendo logotipo, mapa do site, informações institucionais e links para redes sociais.
+
 ---
+
+### Trechos Resumidos do Código
+
+#### 1. Banner Introdutório / Hero (`<section>`)
+O banner apresenta uma imagem de fundo imersiva e a chamada principal para a ação de contato.
+
+```html
+<section class="hero_contato">
+    <img src="img/background-contato.png" alt="Livros e símbolo da justiça">
+    <div class="hero_conteudo">
+        <h1>Entre em contato!</h1>
+        <p>
+            Entre em contato e agende uma conversa para entender seus direitos e
+            encontrar o melhor caminho para o seu caso.
+        </p>
+    </div>
+</section>
+```
+
+#### 2. Informações de Atendimento (`<main>` e `<div>`)
+Bloco que agrupa os canais diretos de comunicação e os links para as redes sociais da advogada.
+
+```html
+<main>
+    <section class="area-contato">
+        <div class="container-contato">
+            <div class="informacoes">
+                <h2>Informações de contato</h2>
+                <p class="descricao">Precisa de orientação? Estamos prontas para ouvir você.</p>
+
+                <div class="informacao">
+                    <a href="#"><img src="img/Telefone.png" alt="Telefone"></a>
+                    <div class="texto-informacao">
+                        <h3>Telefone</h3>
+                        <p>(11) 9999-9999</p>
+                    </div>
+                </div>
+                
+                <!-- Outras informações e redes sociais omitidas para brevidade -->
+            </div>
+```
+
+#### 3. Formulário de Agendamento (`<form>`)
+Estrutura semântica responsável por captar os dados do cliente para a marcação de consultas, utilizando ícones para melhor UX.
+
+```html
+            <div class="formulario">
+                <h2>Agende uma consulta</h2>
+
+                <form action="">
+                    <div class="campo">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <!-- Campos de telefone e data omitidos para brevidade -->
+
+                    <div class="campo mensagem">
+                        <i class="fa-regular fa-comment"></i>
+                        <textarea name="mensagem" placeholder="Mensagem"></textarea>
+                    </div>
+
+                    <div class="area-botao">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+```
+
+#### 4. Rodapé da Página (`<footer>` e `<address>`)
+O rodapé unifica a identidade visual e os contatos, mantendo o padrão das páginas anteriores.
+
+```html
+<footer>
+    <section class="container_footer">
+        <!-- Logo e Navegação -->
+        
+        <address class="footer_info footer_contato">
+            <h2>Contato</h2>
+
+            <div class="contato_item">
+                <img src="img/Vector (2).png" alt="Telefone">
+                <p>(11) 9999-9999</p>
+            </div>
+            <!-- E-mail e Endereço -->
+        </address>
+
+        <article class="footer_info footer_atendimento">
+            <h2>Atendimento</h2>
+            <p>Atendimento online e presencial, agende sua consulta.</p>
+            <a href="#" class="btn_maroon">Consulta</a>
+        </article>
+    </section>
+</footer>
+```
+
+## Tutorial e Estrutura CSS (Contato)
+
+A estilização da página de Contato (`contato.css`) foi desenvolvida com foco em um design elegante, legível e responsivo. A estrutura visual utiliza amplamente **Flexbox** e **CSS Grid** para o posicionamento dos elementos, além de truques de posicionamento para criar sobreposições interessantes entre as seções.
+
+### Principais Técnicas CSS Utilizadas
+
+* **Importação de Fontes (`@import`)**: Utilização das fontes *Poppins* e *Source Serif 4* do Google Fonts para diferenciar títulos de textos corridos.
+* **Reset Global (`*`)**: Zeramento de margens e preenchimentos padrão do navegador, além da aplicação de `box-sizing: border-box` para controle preciso das dimensões.
+* **Flexbox (`display: flex`)**: Utilizado extensivamente para alinhar ícones com textos, centralizar o conteúdo do Hero e organizar os campos do formulário de ponta a ponta.
+* **CSS Grid (`display: grid`)**: Aplicado para dividir a seção principal de contato (informações à esquerda, formulário à direita) e para estruturar as colunas do rodapé.
+* **Posicionamento Absoluto e Relativo (`position`)**: Usado na seção Hero para colocar a imagem de fundo, aplicar uma camada de escurecimento (overlay) e sobrepor o texto.
+* **Margem Negativa (`margin: -110px auto 0`)**: Técnica utilizada no container principal de contato para fazê-lo "subir" e sobrepor a área do banner (Hero), criando um efeito visual de profundidade.
+
+---
+
+### Trechos Resumidos do Código CSS
+
+#### 1. Tipografia e Configurações Globais
+Importação das fontes e definição das cores e tipografia base do documento.
+
+```css
+@import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap)');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D2;
+    color: #4a241b;
+    font-family: 'Source Serif Pro', serif;
+}
+
+```
 
 ## ✨ Integrantes
 - Gabrielly Nogueira Rodrigues (10762966)
