@@ -115,6 +115,9 @@ A página principal (`index.html`) foi estruturada utilizando **HTML5 Semântico
   </section>
 </footer>
 ```
+
+--
+
 ## Tutorial e Estrutura CSS (Home)
 
 A estilização da página Home (`inicio.css`) mantém a identidade visual do projeto e organiza os principais blocos da página com **Flexbox**, **CSS Grid**, posicionamento relativo/absoluto e efeitos simples de interação.
@@ -272,6 +275,163 @@ O Flexbox posiciona imagem e texto lado a lado. O `::after` cria um triângulo d
 ```
 
 O rodapé é dividido em quatro colunas proporcionais para logo, navegação, contato e atendimento.
+
+--
+
+## Tutorial e Estrutura JavaScript (Home)
+
+O JavaScript da página Home foi utilizado para adicionar interatividade à página. O código possui duas funcionalidades principais: a animação dos números da seção de estatísticas e o carrossel de casos, que possui comportamentos diferentes para dispositivos móveis e desktop.
+
+### Principais Técnicas JavaScript Utilizadas
+
+* **`DOMContentLoaded`**: garante que o código seja executado somente depois que o conteúdo HTML da página estiver carregado.
+* **`querySelectorAll`**: utilizado para selecionar os elementos que possuem determinadas classes, como os números das estatísticas e os cards dos casos.
+* **`getElementById`**: utilizado para localizar elementos específicos pelo seu `id`, como os botões e o grupo de casos.
+* **`forEach`**: utilizado para percorrer os números das estatísticas e aplicar a animação individualmente.
+* **`setInterval` e `clearInterval`**: utilizados para criar e finalizar a contagem animada dos números.
+* **`addEventListener`**: utilizado para identificar ações do usuário, como cliques nos botões do carrossel e alterações no tamanho da janela.
+* **`window.innerWidth`**: utilizado para identificar a largura da tela e adaptar o funcionamento do carrossel para mobile ou desktop.
+* **`offsetWidth`**: utilizado para obter a largura dos cards e calcular o deslocamento do carrossel no mobile.
+* **`transform` e `translateX`**: utilizados para movimentar os cards horizontalmente no carrossel.
+
+### Trechos Resumidos do Código JavaScript
+
+#### 1. Carregamento do Documento
+
+```javascript
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Código executado após o carregamento do HTML
+
+});
+```
+
+O `DOMContentLoaded` faz com que o código JavaScript seja executado somente depois que o HTML da página estiver carregado. Isso evita que o JavaScript tente acessar elementos que ainda não foram criados pelo navegador.
+
+#### 2. Animação das Estatísticas
+
+```javascript
+const numeros = document.querySelectorAll(".numero_estatistica");
+
+numeros.forEach(function (numero) {
+    const valorFinal = parseInt(numero.textContent) || 0;
+    let contador = 0;
+
+    if (valorFinal === 0) return;
+
+    const intervalo = setInterval(function () {
+        contador++;
+        numero.textContent = contador + "+";
+
+        if (contador >= valorFinal) {
+            clearInterval(intervalo);
+        }
+    }, 100);
+});
+```
+
+Nesse trecho, o `querySelectorAll` seleciona todos os elementos que possuem a classe `.numero_estatistica`. O `forEach` percorre cada número individualmente.
+
+O valor inicial é obtido com `parseInt()` e o contador começa em zero. O `setInterval()` aumenta o número a cada 100 milissegundos, criando uma animação de contagem. Quando o valor final é atingido, o `clearInterval()` encerra a contagem.
+
+#### 3. Seleção dos Elementos do Carrossel
+
+```javascript
+const grupoCasos = document.getElementById("grupo-casos");
+const btnAnteriorCaso = document.getElementById("anterior-casos");
+const btnProximoCaso = document.getElementById("proximo-casos");
+
+const gruposCasos = grupoCasos
+    ? grupoCasos.querySelectorAll(".grupo-cards")
+    : [];
+
+const cardsCasos = grupoCasos
+    ? grupoCasos.querySelectorAll(".caso_card")
+    : [];
+```
+
+Nesse trecho, o `getElementById()` é utilizado para localizar o grupo de casos e os botões de navegação. Depois, o `querySelectorAll()` seleciona os grupos e os cards que fazem parte do carrossel.
+
+O operador condicional verifica se o elemento `grupoCasos` existe antes de tentar acessar seus elementos, evitando erros caso ele não esteja presente na página.
+
+#### 4. Controle da Posição do Carrossel
+
+```javascript
+let indexCaso = 0;
+
+function atualizarCarrosselCasos() {
+    if (!grupoCasos || cardsCasos.length === 0) {
+        return;
+    }
+
+    if (window.innerWidth <= 768) {
+        const larguraCard = cardsCasos[0].offsetWidth + 15;
+
+        grupoCasos.style.transform =
+            `translateX(-${indexCaso * larguraCard}px)`;
+    } else {
+        grupoCasos.style.transform =
+            `translateX(-${indexCaso * 100}%)`;
+    }
+}
+```
+
+A variável `indexCaso` controla qual posição do carrossel está sendo exibida.
+
+Quando a largura da tela é de até 768 pixels, o código considera o comportamento de dispositivos móveis e movimenta o carrossel card por card. Para isso, utiliza o `offsetWidth` para descobrir a largura do card.
+
+Em telas maiores, o carrossel é movimentado em grupos utilizando `translateX()` e porcentagem.
+
+#### 5. Botão para Avançar
+
+```javascript
+btnProximoCaso.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+        if (indexCaso < cardsCasos.length - 1) {
+            indexCaso++;
+        }
+    } else {
+        if (indexCaso < gruposCasos.length - 1) {
+            indexCaso++;
+        }
+    }
+
+    atualizarCarrosselCasos();
+});
+```
+
+O `addEventListener("click")` identifica quando o usuário clica no botão de avançar.
+
+No mobile, o código verifica a quantidade de cards individuais. No desktop, verifica a quantidade de grupos de cards. Quando ainda existem elementos para serem exibidos, o `indexCaso` é aumentado e a função `atualizarCarrosselCasos()` é chamada para movimentar o carrossel.
+
+#### 6. Botão para Voltar
+
+```javascript
+btnAnteriorCaso.addEventListener("click", () => {
+    if (indexCaso > 0) {
+        indexCaso--;
+    }
+
+    atualizarCarrosselCasos();
+});
+```
+
+Nesse trecho, o botão anterior diminui o valor de `indexCaso`, permitindo voltar para a posição anterior do carrossel.
+
+A condição `indexCaso > 0` impede que o carrossel tente voltar para uma posição anterior à primeira.
+
+#### 7. Adaptação ao Redimensionamento da Tela
+
+```javascript
+window.addEventListener("resize", () => {
+    indexCaso = 0;
+    atualizarCarrosselCasos();
+});
+```
+
+O evento `resize` é executado quando o tamanho da janela do navegador é alterado. Nesse caso, o `indexCaso` volta para zero e o carrossel é atualizado novamente.
+
+Isso permite que o comportamento do carrossel seja reorganizado quando o usuário muda o tamanho da janela, como ao alterar entre diferentes larguras de tela.
 
 ---
 
