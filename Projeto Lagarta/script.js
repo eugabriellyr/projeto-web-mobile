@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const numeros = document.querySelectorAll(".numero-estatistica");
+    const numeros = document.querySelectorAll(".numero_estatistica");
 
     numeros.forEach(function (numero) {
 
