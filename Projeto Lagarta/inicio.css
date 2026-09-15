@@ -369,7 +369,6 @@ header {
 .botao_contato_sobre:hover {
     background-color: #BB9457;
 }
-
 .noticias {
     background-color: #FFF2D2;
     padding: 40px 7% 50px;
@@ -381,18 +380,37 @@ header {
     margin-bottom: 10px;
 }
 
-.container_cards_noticias {
+.carrossel-area {
+    position: relative;
+    width: 100%;
+}
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden; 
+}
+
+.carrossel-grupo {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+.grupo-cards {
     display: flex;
     gap: 25px;
+    min-width: 100%; 
+    box-sizing: border-box;
 }
 
 .caso_card {
     background-color: #ffffff;
-    width: 100%;
+    width: calc(33.333% - 17px); 
     min-height: 200px;
     display: flex;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .caso_card::after {
@@ -439,6 +457,32 @@ header {
 
 .card_link:hover {
     text-decoration: underline;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.botao-redondo {
+    background-color: #6F1D1B;
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.botao-redondo:hover {
+    background-color: #432818;
 }
 
 footer {
