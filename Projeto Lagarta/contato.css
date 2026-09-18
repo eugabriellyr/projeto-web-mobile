@@ -304,21 +304,24 @@ header {
 
 .area-botao button {
     border: none;
-    background-color: var(--maroon);
+    background-color: #6F1D1B;
     color: white;
-    font-family: 'Source Serif 4', serif;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 29px;
-    border-radius: 4px;
+    padding: 11px 22px;
+    border-radius: 5px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .area-botao button:hover {
-    background-color: var(--maroon-dark);
+    background-color: #5a1715;
 }
 
+.area-botao button:hover {
+    background-color: var(--maroon-dark);
+}
 
 /* Footer */
 
