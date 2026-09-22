@@ -277,7 +277,7 @@ O rodapé é dividido em quatro colunas proporcionais para logo, navegação, co
 
 --
 
-## Tutorial e Estrutura JavaScript (Home)
+## Tutorial e Estrutura JavaScript (Home e Sobre)
 
 O JavaScript da página Home foi utilizado para adicionar interatividade à página. O código possui duas funcionalidades principais: a animação dos números da seção de estatísticas e o carrossel de casos, que possui comportamentos diferentes para dispositivos móveis e desktop.
 
@@ -293,7 +293,7 @@ O JavaScript da página Home foi utilizado para adicionar interatividade à pág
 * **`offsetWidth`**: utilizado para obter a largura dos cards e calcular o deslocamento do carrossel no mobile.
 * **`transform` e `translateX`**: utilizados para movimentar os cards horizontalmente no carrossel.
 
-### Trechos Resumidos do Código JavaScript
+### Trechos do Código JavaScript
 
 #### 1. Carregamento do Documento
 
@@ -455,7 +455,7 @@ A página Sobre (`sobre.html`) foi estruturada utilizando **HTML5 Semântico**, 
 
 ---
 
-### Trechos Resumidos do Código
+### Trechos do Código
 
 #### 1. Cabeçalho e Menu de Navegação (`<header>` e `<nav>`)
 
