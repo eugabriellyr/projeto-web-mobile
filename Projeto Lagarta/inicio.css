@@ -68,6 +68,15 @@ header {
     text-decoration: none;
 }
 
+.menu_hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: #6F1D1B;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 .principal {
     background-color: #FFF2D2;
     position: relative;
@@ -147,11 +156,11 @@ header {
 .img_estatua_sobreposta {
     position: absolute;
     top: -10px;
-    left: -20%;
+    left: 10%;
     height: 434px;
     width: auto;
     object-fit: contain;
-    z-index: 20;
+    z-index: 2000;
     pointer-events: none;
 }
 
@@ -372,6 +381,7 @@ header {
 .botao_contato_sobre:hover {
     background-color: #BB9457;
 }
+
 .noticias {
     background-color: #FFF2D2;
     padding: 40px 7% 50px;
@@ -390,7 +400,7 @@ header {
 
 .carrossel-container {
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .carrossel-grupo {
@@ -402,13 +412,13 @@ header {
 .grupo-cards {
     display: flex;
     gap: 25px;
-    min-width: 100%; 
+    min-width: 100%;
     box-sizing: border-box;
 }
 
 .caso_card {
     background-color: #ffffff;
-    width: calc(33.333% - 17px); 
+    width: calc(33.333% - 17px);
     min-height: 200px;
     display: flex;
     position: relative;
@@ -613,3 +623,263 @@ footer {
     object-fit: contain;
 }
 
+@media (max-width: 768px) {
+    header {
+        z-index: 1000;
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .menu_hamburguer {
+        display: block;
+        position: relative;
+        z-index: 100000;
+        border: none;
+        background: transparent;
+        color: #6F1D1B;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .botao_consulta {
+        display: none;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .nav_links.ativo {
+        display: flex;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #ffffff;
+        list-style: none;
+        z-index: 99999;
+    }
+
+    .nav_links.ativo li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav_links.ativo li a {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #333333;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .container_principal {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .principal_texto {
+        width: 100%;
+        padding: 40px 25px;
+    }
+
+    .titulo_principal {
+        max-width: 100%;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .descricao {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .botao_contato_principal {
+        margin-top: 25px;
+    }
+
+    .container_hero_imagens {
+        width: 100%;
+        height: 300px;
+    }
+
+    .img_fundo_card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img_estatua_sobreposta {
+        height: 300px;
+        left: 10%;
+        top: 0;
+    }
+
+    .barra_estatisticas {
+        padding: 20px 10px;
+    }
+
+    .grade_estatisticas {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .item_estatistica {
+        width: 100%;
+    }
+
+    .separador {
+        width: 60%;
+        height: 1px;
+    }
+
+    .areas_atuacao {
+        padding: 40px 20px;
+    }
+
+    .container_areas {
+        width: 100%;
+    }
+
+    .titulo_areas {
+        font-size: 28px;
+    }
+
+    .container_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartao {
+        width: 75%;
+        max-width: 260px;
+        height: 310px;
+    }
+
+    .sobre {
+        padding: 45px 20px;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .img_advogada {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    }
+
+    .sobre_texto {
+        width: 100%;
+    }
+
+    .sobre_titulo {
+        font-size: 28px;
+    }
+
+    .sobre_descricao {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .check_list li {
+        font-size: 15px;
+    }
+
+    .noticias {
+        padding: 40px 20px 50px;
+    }
+
+    .noticias_titulo {
+        font-size: 26px;
+    }
+
+    .carrossel-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carrossel-grupo {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .grupo-cards {
+        display: contents;
+    }
+
+    .caso_card {
+        min-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .caso_img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .caso_conteudo {
+        width: 100%;
+        padding: 20px 22px 22px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caso_titulo {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .caso_texto {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .card_link {
+        margin-top: 15px;
+    }
+
+    footer {
+        padding: 40px 25px 25px;
+    }
+
+    .container_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_logo p {
+        max-width: 100%;
+    }
+
+    .footer_atendimento p {
+        max-width: 100%;
+    }
+
+    .social_links {
+        margin-top: 20px;
+    }
+}
