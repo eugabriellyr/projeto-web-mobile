@@ -8,12 +8,11 @@
 
 body {
     background-color: #FFF2D2;
-    color: #4a241b;
-    font-family: 'Source Serif 4', serif;
+    color: #432818;
 }
 
 
-/* Header */
+/*Navbar*/
 header {
     background-color: transparent;
     position: relative;
@@ -64,7 +63,7 @@ header {
     background-color: #6F1D1B;
     color: white;
     padding: 11px 22px;
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: 'Source Serif 4', serif;
     font-weight: bold;
     text-decoration: none;
@@ -78,252 +77,216 @@ header {
     cursor: pointer;
 }
 
-/* Formulário */
-.hero_contato {
-    width: 100%;
-    height: 485px;
-    position: relative;
-    overflow: hidden;
+
+/*Principal - sobre*/
+.sobre {
+    min-height: 570px;
+    background-color: #FFF2D2;
+    padding: 75px 8%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    gap: 90px;
 }
 
-.hero_contato img {
+.sobre_texto {
+    width: 520px;
+}
+
+.sobre_titulo {
+    color: #6F1D1B;
+    font-family: 'Source Serif 4', serif;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.linha {
+    width: 55px;
+    height: 2px;
+    background-color: #BB9457;
+    margin: 12px 0 28px;
+}
+
+.sobre_descricao {
+    color: #4a241b;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botao_contato {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 11px 22px;
+    background-color: #6F1D1B;
+    color: #FFF2D2;
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botao_contato::after {
+    content: " →";
+}
+
+.botao_contato:hover {
+    background-color: #5a1715;
+}
+
+.img_advogada {
+    width: 440px;
+    height: 470px;
+    background-color: #d3d3d3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 8px 22px rgba(67, 40, 24, 0.16);
+}
+
+.img_advogada::after {
+    content: "";
     position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 45px solid #BB9457;
+    border-left: 45px solid transparent;
+}
+
+.img_advogada img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    z-index: 0;
 }
 
-.hero_contato::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(40, 23, 17, 0.48);
-    z-index: 1;
-}
 
-.hero_conteudo {
-    position: relative;
-    z-index: 2;
-    color: white;
-    margin-top: -50px;
-    padding: 0 20px;
-}
-
-.hero_conteudo h1 {
-    font-family: 'Source Serif 4', serif;
-    font-size: 58px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.hero_conteudo p {
-    max-width: 750px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.6;
-}
-
-.area-contato {
-    background-color: #FFF2D2;
-    padding-bottom: 100px;
-}
-
-.container-contato {
-    width: 78%;
-    max-width: 1100px;
-    min-height: 620px;
-    margin: -110px auto 0;
-    position: relative;
-    z-index: 3;
-    background-color: #fff1cf;
-    border-radius: 14px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20);
+/*Contador - estatísticas*/
+.estatisticas {
+    min-height: 100px;
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    padding: 52px 50px;
-}
-
-.informacoes {
-    padding-right: 45px;
-    border-right: 1px solid #8a6257;
-}
-
-.informacoes h2 {
-    font-family: 'Source Serif 4', serif;
-    color: #6F1D1B;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 14px;
-}
-
-.descricao {
-    font-size: 13px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-.informacao {
-    display: flex;
+    grid-template-columns: auto 1fr 1fr auto;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 27px;
+    margin-top: 38px;
+    padding-top: 10px;
 }
 
-.informacao img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
+.estatisticas .linha {
+    width: 2px;
+    height: 65px;
+    margin: 0;
+    background-color: #BB9457;
 }
 
-.texto-informacao h3 {
-    font-family: 'Source Serif 4', serif;
+.estatistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     color: #6F1D1B;
-    font-size: 17px;
-    font-weight: 400;
-    margin-bottom: 3px;
-}
-
-.texto-informacao p {
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
+    margin: 0 25px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
-.redes {
-    margin-top: 32px;
-}
-
-.redes h3 {
+.numero_estatistica {
     font-family: 'Source Serif 4', serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+/*Áreas de atuação - cards*/
+.areas_atuacao {
+    background-color: #F7E6C2;
+    padding: 60px 8% 70px;
+    border-top: 1px solid rgba(111, 29, 27, 0.12);
+}
+
+.container_areas {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.titulo_areas {
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 32px;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cartao {
+    width: 250px;
+    height: 310px;
+    background-color: #FFF9EC;
+    border: 1px solid #6F1D1B54;
+    border-radius: 4px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(74, 36, 27, 0.12);
+}
+
+.icone_cartao {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 25px;
+}
+
+.titulo_cartao {
+    width: 150px;
     color: #6F1D1B;
-    font-size: 16px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 22px;
+    line-height: 1.2;
     margin-bottom: 12px;
 }
 
-.redes-icons {
-    display: flex;
-    gap: 20px;
+.descricao_cartao {
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.redes-icons a {
-    width: 31px;
-    height: 31px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #6F1D1B;
-    color: white;
-    transition: 0.3s;
-}
-
-.redes-icons a:hover {
-    background-color: #5a1715;
-    transform: translateY(-2px);
-}
-
-.redes-icons img {
-    width: 31px;
-    height: 31px;
-    object-fit: contain;
-}
-
-.formulario {
-    padding-left: 50px;
-}
-
-.formulario h2 {
-    font-family: 'Source Serif 4', serif;
+.link_cartao {
+    margin-top: auto;
     color: #6F1D1B;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 28px;
-}
-
-.campo {
-    width: 100%;
-    height: 43px;
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    padding: 0 17px;
-    margin-bottom: 23px;
-    background-color: white;
-    border-radius: 4px;
-}
-
-.campo i {
-    font-size: 15px;
-    color: #222;
-    flex-shrink: 0;
-}
-
-.campo input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
     font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    color: #333;
-}
-
-.campo input::placeholder {
-    color: #333;
-}
-
-.campo.mensagem {
-    height: 100px;
-    align-items: flex-start;
-    padding-top: 14px;
-}
-
-.campo textarea {
-    width: 100%;
-    height: 75px;
-    border: none;
-    outline: none;
-    resize: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    background: transparent;
-    color: #333;
-}
-
-.campo textarea::placeholder {
-    color: #333;
-}
-
-.area-botao {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.area-botao button {
-    border: none;
-    background-color: #6F1D1B;
-    color: white;
-    padding: 11px 22px;
-    border-radius: 5px;
-    font-family: 'Source Serif 4', serif;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: 600;
     text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.area-botao button:hover {
-    background-color: #5a1715;
+.link_cartao::after {
+    content: " →";
 }
 
+.link_cartao:hover {
+    color: #432818;
+}
 
-/* Footer */
+/*Footer*/
 footer {
     background-color: white;
     color: #6F1D1B;
@@ -450,10 +413,10 @@ footer {
 }
 
 
-/* Responsivo */
+/*Responsivo*/
 @media (max-width: 768px) {
 
-    /* Header */
+    /*Navbar*/
     .menu {
     position: relative;
     display: flex;
@@ -518,54 +481,85 @@ footer {
     font-size: 17px;
 }
 
-
-    /* Formulário */
-    .hero_contato {
-        height: 350px;
+    /*Principal - sobre*/
+    .sobre {
+        min-height: auto;
+        padding: 50px 20px;
+        flex-direction: column;
+        gap: 40px;
     }
 
-    .hero_conteudo {
-        margin-top: 0;
+    .sobre_texto {
+        width: 100%;
+        max-width: 500px;
     }
 
-    .hero_conteudo h1 {
-        font-size: 38px;
+    .sobre_titulo {
+        font-size: 32px;
     }
 
-    .hero_conteudo p {
-        font-size: 14px;
+    .sobre_descricao {
+        font-size: 15px;
+        line-height: 1.7;
     }
 
-    .container-contato {
-        width: 90%;
-        margin-top: -70px;
-        grid-template-columns: 1fr;
-        padding: 35px 25px;
+    .botao_contato {
+        margin-top: 25px;
     }
 
-    .informacoes {
-        padding-right: 0;
-        padding-bottom: 35px;
-        border-right: none;
-        border-bottom: 1px solid #8a6257;
-    }
-
-    .formulario {
-        padding-left: 0;
-        padding-top: 35px;
-    }
-
-    .informacoes h2,
-    .formulario h2 {
-        font-size: 24px;
-    }
-
-    .area-botao {
-        justify-content: center;
+    .img_advogada {
+        width: 100%;
+        max-width: 380px;
+        height: 420px;
     }
 
 
-    /* Footer */
+    /*Contador - estatísticas*/
+    .estatisticas {
+        grid-template-columns: 1fr 1fr;
+        min-height: auto;
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .estatisticas .linha {
+        display: none;
+    }
+
+    .estatistica {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .numero_estatistica {
+        font-size: 28px;
+    }
+
+
+    /*Áreas de atuação - cards*/
+    .areas_atuacao {
+        padding: 50px 20px;
+    }
+
+    .titulo_areas {
+        font-size: 28px;
+    }
+
+    .container_cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 290px;
+    }
+
+
+    /*Footer*/
     .container_footer {
         grid-template-columns: 1fr;
         gap: 30px;

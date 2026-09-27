@@ -62,7 +62,7 @@ header {
     background-color: #6F1D1B;
     color: white;
     padding: 11px 22px;
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: 'Source Serif Pro', serif;
     font-weight: bold;
     text-decoration: none;
@@ -247,7 +247,7 @@ header {
     height: 310px;
     background-color: #FDF5E5;
     border: 1px solid #6F1D1B54;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
@@ -284,17 +284,24 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
+.card_link,
 .link_cartao {
     margin-top: auto;
     color: #6F1D1B;
-    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
     text-decoration: none;
-    font-family: 'Source Serif Pro', serif;
 }
 
+.card_link::after,
+.link_cartao::after {
+    content: " →";
+}
+
+.card_link:hover,
 .link_cartao:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    color: #432818;
 }
 
 .sobre {
@@ -303,7 +310,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 70px;
+    gap: 150px;
 }
 
 .img_advogada {
@@ -384,12 +391,18 @@ header {
 
 .noticias {
     background-color: #FFF2D2;
-    padding: 40px 7% 50px;
+    padding: 60px 0 75px;
+}
+
+.container_noticias {
+    width: 1075px;
+    margin: 0 auto;
 }
 
 .noticias_titulo {
     color: #432818;
-    font-size: 28px;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
@@ -419,11 +432,12 @@ header {
 .caso_card {
     background-color: #ffffff;
     width: calc(33.333% - 17px);
-    min-height: 200px;
+    min-height: 230px;
     display: flex;
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+    border-radius: 4px;
 }
 
 .caso_card::after {
@@ -437,13 +451,13 @@ header {
 
 .caso_img {
     width: 40%;
-    height: 200px;
+    height: 230px;
     object-fit: cover;
 }
 
 .caso_conteudo {
     width: 60%;
-    padding: 18px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -461,22 +475,12 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 
-.card_link {
-    color: #6F1D1B;
-    font-size: 12px;
-    margin-top: auto;
-    text-decoration: none;
-}
-
-.card_link:hover {
-    text-decoration: underline;
-}
 
 .controles {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .botao-redondo {
@@ -808,8 +812,16 @@ footer {
         padding: 40px 20px 50px;
     }
 
+    .container_noticias {
+        width: 100%;
+    }
+
     .noticias_titulo {
         font-size: 26px;
+    }
+
+    .carrossel-area {
+        width: 100%;
     }
 
     .carrossel-container {
@@ -829,6 +841,7 @@ footer {
     .caso_card {
         min-width: 100%;
         width: 100%;
+        min-height: auto;
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
@@ -842,6 +855,7 @@ footer {
 
     .caso_conteudo {
         width: 100%;
+        min-height: 190px;
         padding: 20px 22px 22px;
         display: flex;
         flex-direction: column;
@@ -859,6 +873,10 @@ footer {
 
     .card_link {
         margin-top: 15px;
+    }
+
+    .controles {
+        margin-top: 25px;
     }
 
     footer {

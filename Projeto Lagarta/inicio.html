@@ -6,7 +6,7 @@
     <title>Página Principal</title>
     <link rel="stylesheet" href="inicio.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 <header>
@@ -16,8 +16,8 @@
         </a>
         <ul class="nav_links">
             <li><a href="inicio.html">Home</a></li>
-            <li><a href="contato.html">Contato</a></li>
             <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
         <a href="#" class="botao_consulta">Consulta</a>
 
@@ -81,28 +81,28 @@
                     <img src="img/Consumidor.png" alt="Ícone Defesa do Consumidor" class="icone_cartao">
                     <h2 class="titulo_cartao">Defesa do Consumidor</h2>
                     <p class="descricao_cartao">Defesa dos seus direitos nas relações de consumo.</p>
-                    <a href="#" class="link_cartao">Saiba mais &rarr;</a>
+                    <a href="#" class="link_cartao">Saiba mais</a>
                 </article>
 
                 <article class="cartao">
                     <img src="img/familia.png" alt="Ícone Direito da Família" class="icone_cartao">
                     <h2 class="titulo_cartao">Direito da Família</h2>
                     <p class="descricao_cartao">Defesa dos seus direitos nas relações de família.</p>
-                    <a href="#" class="link_cartao">Saiba mais &rarr;</a>
+                    <a href="#" class="link_cartao">Saiba mais</a>
                 </article>
 
                 <article class="cartao">
                     <img src="img/trabalhista.png" alt="Ícone Direitos Trabalhistas" class="icone_cartao">
                     <h2 class="titulo_cartao">Direitos Trabalhistas</h2>
                     <p class="descricao_cartao">Defesa dos seus direitos nas relações trabalhistas.</p>
-                    <a href="#" class="link_cartao">Saiba mais &rarr;</a>
+                    <a href="#" class="link_cartao">Saiba mais</a>
                 </article>
 
                 <article class="cartao">
                     <img src="img/civil.png" alt="Ícone Legislação Civil" class="icone_cartao">
                     <h2 class="titulo_cartao">Legislação Civil</h2>
                     <p class="descricao_cartao">Defesa dos seus direitos na área civil.</p>
-                    <a href="#" class="link_cartao">Saiba mais &rarr;</a>
+                    <a href="#" class="link_cartao">Saiba mais</a>
                 </article>
             </div>
         </article>
@@ -119,9 +119,9 @@
             <p class="sobre_descricao">Atuação pautada na ética, responsabilidade e dedicação. O objetivo é oferecer um atendimento personalizado, com foco na melhor solução para cada caso.</p>
 
             <ul class="check_list">
-                <li><img src="img/Check.png" alt="">Atendimento humanizado</li>
-                <li><img src="img/Check.png" alt="">Compromisso com o cliente</li>
-                <li><img src="img/Check.png" alt="">Transparência e ética profissional</li>
+                <li><img src="img/Check.png" alt="">Atendimento humanizado;</li>
+                <li><img src="img/Check.png" alt="">Compromisso com o cliente;</li>
+                <li><img src="img/Check.png" alt="">Transparência e ética profissional.</li>
             </ul>
 
             <a href="contato.html" class="botao_contato botao_contato_sobre">Contato</a>
@@ -129,82 +129,128 @@
     </section>
 
     <section class="noticias">
+    <div class="container_noticias">
+
         <h2 class="noticias_titulo">Últimos Casos</h2>
         <div class="linha"></div>
-    
+
         <div class="carrossel-area">
             <div class="carrossel-container">
                 <div class="carrossel-grupo" id="grupo-casos">
-    
+
                     <!-- GRUPO 1 (Primeiros 3 cards) -->
                     <div class="grupo-cards">
+
                         <article class="caso_card card">
                             <img src="img/Devino antreprenor, impreuna este simplu! 1.png" alt="Caso" class="caso_img">
+
                             <div class="caso_conteudo">
                                 <h3 class="caso_titulo">Quebra de Contrato</h3>
-                                <p class="caso_texto">Empresa com quebra de contrato sem aviso prévio. Atuação ágil para reaver valores.</p>
-                                <a href="#" class="card_link">Saiba mais &rarr;</a>
+
+                                <p class="caso_texto">
+                                    Empresa com quebra de contrato sem aviso prévio.
+                                    Atuação ágil para reaver valores.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
                             </div>
                         </article>
-    
+
                         <article class="caso_card card">
                             <img src="img/Command Your Contracts, Command Your Future 1.png" alt="Caso" class="caso_img">
+
                             <div class="caso_conteudo">
                                 <h3 class="caso_titulo">Contratos sem Revisão</h3>
-                                <p class="caso_texto">Contrato sem revisão prévia gera prejuízos financeiros e riscos ao negócio.</p>
-                                <a href="#" class="card_link">Saiba mais &rarr;</a>
+
+                                <p class="caso_texto">
+                                    Contrato sem revisão prévia gera prejuízos financeiros
+                                    e riscos ao negócio.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
                             </div>
                         </article>
-    
+
                         <article class="caso_card card">
                             <img src="img/transferir (6) 1.png" alt="Caso" class="caso_img">
+
                             <div class="caso_conteudo">
                                 <h3 class="caso_titulo">Direitos Trabalhistas</h3>
-                                <p class="caso_texto">Demitida sem justa causa e sem direitos? Buscamos a devida reparação na justiça.</p>
-                                <a href="#" class="card_link">Saiba mais &rarr;</a>
+
+                                <p class="caso_texto">
+                                    Demitida sem justa causa e sem direitos?
+                                    Buscamos a devida reparação na justiça.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
                             </div>
                         </article>
+
                     </div>
-    
+
+
                     <!-- GRUPO 2 (Próximos 3 cards) -->
                     <div class="grupo-cards">
+
                         <article class="caso_card card">
                             <img src="img/Devino antreprenor, impreuna este simplu! 1.png" alt="Caso" class="caso_img">
+
                             <div class="caso_conteudo">
                                 <h3 class="caso_titulo">Inventário e Partilha</h3>
-                                <p class="caso_texto">Problemas no inventario familiar? Orientação especializada agiliza a partilha.</p>
-                                <a href="#" class="card_link">Saiba mais &rarr;</a>
+
+                                <p class="caso_texto">
+                                    Problemas no inventário familiar?
+                                    Orientação especializada agiliza a partilha.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
                             </div>
                         </article>
-    
+
                         <article class="caso_card card">
                             <img src="img/Command Your Contracts, Command Your Future 1.png" alt="Caso" class="caso_img">
+
                             <div class="caso_conteudo">
                                 <h3 class="caso_titulo">Defesa do Consumidor</h3>
-                                <p class="caso_texto">Consumidor lesado por propaganda enganosa tem direito à restituição e danos.</p>
-                                <a href="#" class="card_link">Saiba mais &rarr;</a>
+
+                                <p class="caso_texto">
+                                    Consumidor lesado por propaganda enganosa
+                                    tem direito à restituição e danos.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
                             </div>
                         </article>
-    
+
                         <article class="caso_card card">
                             <img src="img/transferir (6) 1.png" alt="Caso" class="caso_img">
+
                             <div class="caso_conteudo">
                                 <h3 class="caso_titulo">Cobrança Indevida</h3>
-                                <p class="caso_texto">Empresa sofreu cobrança indevida? Atuação estratégica para blindar o patrimônio.</p>
-                                <a href="#" class="card_link">Saiba mais &rarr;</a>
+
+                                <p class="caso_texto">
+                                    Empresa sofreu cobrança indevida?
+                                    Atuação estratégica para blindar o patrimônio.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
                             </div>
                         </article>
+
                     </div>
-    
+
                 </div>
             </div>
-    
+
             <div class="controles">
                 <button id="anterior-casos" class="botao-redondo">&lt;</button>
                 <button id="proximo-casos" class="botao-redondo">&gt;</button>
             </div>
+
         </div>
-    </section>
+
+    </div>
+</section>
 
 </main>
 
