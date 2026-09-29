@@ -319,6 +319,7 @@ header {
     background-color: #d3d3d3;
     position: relative;
     overflow: hidden;
+    border-radius: 6px;
 }
 
 .img_advogada::after {
