@@ -1,4 +1,4 @@
-# 🐛 Projeto Lagarta: Portfólio Jurídico Dinâmico (HTML, CSS & JavaScript)
+# 🐛 Projeto Lagarta (HTML, CSS & JavaScript)
 
 
 # ⚖️ Portfólio Jurídico
