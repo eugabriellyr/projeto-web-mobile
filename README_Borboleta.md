@@ -1,4 +1,4 @@
-<img width="1441" height="1380" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/c8053756-767b-4ca6-b925-a806a8e6b340" /># 🦋 Projeto 2 (Next.js & React)
+# 🦋 Projeto 2 (Next.js & React)
 
 > O Projeto Borboleta representa a evolução do Projeto Lagarta, onde irá ser migrado a aplicação da estrutura estática em HTML/CSS para uma estrutura baseada em componentização, ao reutilizar componentes, com React e o framework Next.js.
 
