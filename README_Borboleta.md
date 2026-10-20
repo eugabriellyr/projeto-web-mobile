@@ -34,7 +34,7 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 <img width="30%" height="30%" alt="AboutPage" src="https://github.com/user-attachments/assets/6fd418a0-7fb8-4e34-9803-83faea2546d2" />
 <img width="30%" height="30%" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/9ee62ef4-cc1e-4c81-9305-09be4d599543" />
 
-<br />
+--
 
 🧩 **Estrutura de Componentes Planejada:**
 - **Navbar e Footer** (componentes globais).
