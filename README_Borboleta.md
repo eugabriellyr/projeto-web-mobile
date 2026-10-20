@@ -29,7 +29,7 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 
 ## 🎨 Protótipo e Planejamento Visual
 
-<img width="1000" height="1080" alt="MainPage" src="https://github.com/user-attachments/assets/e8bcec00-b412-436c-a20b-dd706a2e606a" />
+<img width="50%" height="50%" alt="MainPage" src="https://github.com/user-attachments/assets/e8bcec00-b412-436c-a20b-dd706a2e606a" />
 <img width="1000" height="1080" alt="ContactPage" src="https://github.com/user-attachments/assets/17554874-d309-4182-b9d8-e8a6331b4358" />
 <img width="1000" height="1080" alt="AboutPage" src="https://github.com/user-attachments/assets/6fd418a0-7fb8-4e34-9803-83faea2546d2" />
 
