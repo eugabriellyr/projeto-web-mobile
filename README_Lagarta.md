@@ -1,5 +1,6 @@
 # 🐛 Projeto Lagarta: Portfólio Jurídico Dinâmico (HTML, CSS & JavaScript)
 
+
 # ⚖️ Portfólio Jurídico
 
 Site institucional e portfólio profissional desenvolvido para uma advogada em início de carreira, com o objetivo de divulgar seus serviços, construir presença digital e oferecer conteúdos informativos sobre direitos.
