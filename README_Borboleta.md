@@ -36,6 +36,7 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 
 
 
+
 🧩 **Estrutura de Componentes Planejada:**
 - **Navbar e Footer** (componentes globais).
 - **HeroSection** (destaque visual na página inicial).
