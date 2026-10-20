@@ -1,4 +1,4 @@
-# 🦋 Projeto 2 (Next.js & React)
+<img width="1441" height="1380" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/c8053756-767b-4ca6-b925-a806a8e6b340" /># 🦋 Projeto 2 (Next.js & React)
 
 > O Projeto Borboleta representa a evolução do Projeto Lagarta, onde irá ser migrado a aplicação da estrutura estática em HTML/CSS para uma estrutura baseada em componentização, ao reutilizar componentes, com React e o framework Next.js.
 
@@ -32,13 +32,16 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 <img width="30%" height="30%" alt="MainPage" src="https://github.com/user-attachments/assets/e8bcec00-b412-436c-a20b-dd706a2e606a" />
 <img width="30%" height="30%" alt="ContactPage" src="https://github.com/user-attachments/assets/17554874-d309-4182-b9d8-e8a6331b4358" />
 <img width="30%" height="30%" alt="AboutPage" src="https://github.com/user-attachments/assets/6fd418a0-7fb8-4e34-9803-83faea2546d2" />
+<img width="30%" height="30%" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/9ee62ef4-cc1e-4c81-9305-09be4d599543" />
 
 
-**Estrutura de Componentes Planejada:**
+
+🧩 **Estrutura de Componentes Planejada:**
 - **Navbar e Footer** (componentes globais).
 - **HeroSection** (destaque visual na página inicial).
 - **Cards** (exibição dinâmica das áreas de atuação).
 - **ArticleView** (para a parte de conteúdos informativos).
+
   
 🛠️ **Tecnologias Escolhidas**
 - **Next.js**: Framework React para otimização de rotas e renderização.
