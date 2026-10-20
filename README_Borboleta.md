@@ -42,6 +42,7 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 - **Cards** (exibição dinâmica das áreas de atuação).
 - **ArticleView** (para a parte de conteúdos informativos).
 
+---
   
 🛠️ **Tecnologias Escolhidas**
 - **Next.js**: Framework React para otimização de rotas e renderização.
