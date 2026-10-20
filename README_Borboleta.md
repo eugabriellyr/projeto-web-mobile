@@ -32,9 +32,7 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 <img width="30%" height="30%" alt="MainPage" src="https://github.com/user-attachments/assets/e8bcec00-b412-436c-a20b-dd706a2e606a" />
 <img width="30%" height="30%" alt="ContactPage" src="https://github.com/user-attachments/assets/17554874-d309-4182-b9d8-e8a6331b4358" />
 <img width="30%" height="30%" alt="AboutPage" src="https://github.com/user-attachments/assets/6fd418a0-7fb8-4e34-9803-83faea2546d2" />
-<img width="30%" height="30%" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/9ee62ef4-cc1e-4c81-9305-09be4d599543" />
-
-
+<img width="30%" height="30%" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/9ee62ef4-cc1e-4c81-9305-09be4d599543" />\
 
 
 🧩 **Estrutura de Componentes Planejada:**
