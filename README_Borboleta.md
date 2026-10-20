@@ -34,14 +34,14 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 <img width="30%" height="30%" alt="AboutPage" src="https://github.com/user-attachments/assets/6fd418a0-7fb8-4e34-9803-83faea2546d2" />
 
 
-- Estrutura de Componentes Planejada:
-  - Navbar e Footer (componentes globais).
-  - HeroSection (destaque visual na página inicial).
-  - Cards (exibição dinâmica das áreas de atuação).
-  - ArticleView (para a parte de conteúdos informativos).
+**Estrutura de Componentes Planejada:**
+- **Navbar e Footer** (componentes globais).
+- **HeroSection** (destaque visual na página inicial).
+- **Cards** (exibição dinâmica das áreas de atuação).
+- **ArticleView** (para a parte de conteúdos informativos).
   
-- 🛠️ Tecnologias Escolhidas
-  - Next.js: Framework React para otimização de rotas e renderização.
-  - CSS Modules / Globals.css: Estilização modularizada e limpa.
-  - API Routes internas do Next.js: Utilização de arquivos JSON estáticos (mockados) para simular um banco de dados consumido via fetch e manipulado com o hook useEffect no cliente.
-  - Gerenciamento de Estado Nativo: Uso exclusivo de useState e useEffect para controle de interatividade simples na interface.
+🛠️ **Tecnologias Escolhidas**
+- **Next.js**: Framework React para otimização de rotas e renderização.
+- **CSS Modules / Globals.css**: Estilização modularizada e limpa.
+- **API Routes internas do Next.js**: Utilização de arquivos JSON estáticos (mockados) para simular um banco de dados consumido via fetch e manipulado com o hook useEffect no cliente.
+- **Gerenciamento de Estado Nativo**: Uso exclusivo de useState e useEffect para controle de interatividade simples na interface.
