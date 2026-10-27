@@ -68,20 +68,20 @@ O projeto foi inicializado utilizando o ecossistema do Next.js, adotando uma org
 #### 🛠️ Arquivos Criados no Projeto:
 **Página Inicial**
 
-_inicio.js / inicio.module.css_ (ou a raiz page.js / page.module.css)
+_inicio.js / inicio.module.css_ (ou a raiz page.js / page.module.css):
 Porta de entrada institucional, destacando a identidade visual da advogada em tons de bordô e bege, as áreas de atuação e o acesso rápido aos canais de comunicação.
-
+---
 **Página Sobre**
 
-_sobre.js / sobre.module.css_
+_sobre.js / sobre.module.css_:
 Voltada para a construção da presença digital, apresentando a trajetória profissional, formação e o compromisso extensionista da advogada na democratização do acesso à informação jurídica.
-
+---
 **Página de Contato**
 
-_contato.js / contato.module.css_
+_contato.js / contato.module.css_:
 Destinada a facilitar o atendimento direto de clientes através de links para o WhatsApp e canais de agendamento rápido.
-
+---
 **Layout Global**
 
-_layout.js_
+_layout.js_:
 Define a estrutura compartilhada e o encapsulamento padrão da aplicação em Next.js.
