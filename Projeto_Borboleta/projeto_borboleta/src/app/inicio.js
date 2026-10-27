@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav class="menu">
+        <a href="inicio.html" class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </a>
+        <ul class="nav_links">
+            <li><a href="inicio.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <a href="#" class="botao_consulta">Consulta</a>
+
+        <button class="menu_hamburguer" id="menu-hamburguer">
+            ☰
+        </button>
+
+    </nav>
+</header>
+
+<main>
+    <section class="principal">
+        <article class="container_principal">
+            <div class="principal_texto">
+                <h1 class="titulo_principal">Seu <span>direito</span> nossa causa</h1>
+                <div class="linha"></div>
+                <p class="descricao">Atuo na análise preventiva, elaboração de contratos e defesa estratégica de interesses, unindo rigor técnico e atendimento humanizado para garantir segurança jurídica e soluções eficientes para cada cliente.</p>
+                <a href="contato.html" class="botao_contato botao_contato_principal">Contato</a>
+            </div>
+            <div class="container_hero_imagens">
+                <img src="img/Capturar.JPG" alt="Fundo Dourado" class="img_fundo_card">
+                <img src="img/ChatGPT Image 30 de ago. de 2026, 02_13_39-Photoroom 1 (1).png" alt="Estátua da Justiça" class="img_estatua_sobreposta">
+            </div>
+        </article>
+    </section>
+
+    <section class="barra_estatisticas">
+        <ul class="grade_estatisticas">
+            <li class="item_estatistica">
+                <img src="img/Calendario.png" alt="Calendário" class="imagem_icone_estatistica">
+                <p>
+                    <strong class="numero_estatistica">5+</strong>
+                    <span class="rotulo_estatistica">Anos de Carreira</span>
+                </p>
+            </li>
+            <li class="separador"></li>
+            <li class="item_estatistica">
+                <img src="img/Pessoa.png" alt="Clientes" class="imagem_icone_estatistica">
+                <p>
+                    <strong class="numero_estatistica">50+</strong>
+                    <span class="rotulo_estatistica">Clientes Atendidos</span>
+                </p>
+            </li>
+            <li class="separador"></li>
+            <li class="item_estatistica">
+                <img src="img/joia.png" alt="Casos" class="imagem_icone_estatistica">
+                <p>
+                    <strong class="numero_estatistica">15+</strong>
+                    <span class="rotulo_estatistica">Casos Resolvidos</span>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="areas_atuacao">
+        <article class="container_areas">
+            <h1 class="titulo_areas">Áreas de Atuação</h1>
+            <div class="linha"></div>
+            <div class="container_cards">
+                <article class="cartao">
+                    <img src="img/Consumidor.png" alt="Ícone Defesa do Consumidor" class="icone_cartao">
+                    <h2 class="titulo_cartao">Defesa do Consumidor</h2>
+                    <p class="descricao_cartao">Defesa dos seus direitos nas relações de consumo.</p>
+                    <a href="#" class="link_cartao">Saiba mais</a>
+                </article>
+
+                <article class="cartao">
+                    <img src="img/familia.png" alt="Ícone Direito da Família" class="icone_cartao">
+                    <h2 class="titulo_cartao">Direito da Família</h2>
+                    <p class="descricao_cartao">Defesa dos seus direitos nas relações de família.</p>
+                    <a href="#" class="link_cartao">Saiba mais</a>
+                </article>
+
+                <article class="cartao">
+                    <img src="img/trabalhista.png" alt="Ícone Direitos Trabalhistas" class="icone_cartao">
+                    <h2 class="titulo_cartao">Direitos Trabalhistas</h2>
+                    <p class="descricao_cartao">Defesa dos seus direitos nas relações trabalhistas.</p>
+                    <a href="#" class="link_cartao">Saiba mais</a>
+                </article>
+
+                <article class="cartao">
+                    <img src="img/civil.png" alt="Ícone Legislação Civil" class="icone_cartao">
+                    <h2 class="titulo_cartao">Legislação Civil</h2>
+                    <p class="descricao_cartao">Defesa dos seus direitos na área civil.</p>
+                    <a href="#" class="link_cartao">Saiba mais</a>
+                </article>
+            </div>
+        </article>
+    </section>
+
+    <section class="sobre">
+        <figure class="img_advogada">
+            <img src="img/advogada.jpeg" alt="Foto da advogada">
+        </figure>
+
+        <article class="sobre_texto">
+            <h2 class="sobre_titulo">Sobre a Doutora</h2>
+            <div class="linha"></div>
+            <p class="sobre_descricao">Atuação pautada na ética, responsabilidade e dedicação. O objetivo é oferecer um atendimento personalizado, com foco na melhor solução para cada caso.</p>
+
+            <ul class="check_list">
+                <li><img src="img/Check.png" alt="">Atendimento humanizado;</li>
+                <li><img src="img/Check.png" alt="">Compromisso com o cliente;</li>
+                <li><img src="img/Check.png" alt="">Transparência e ética profissional.</li>
+            </ul>
+
+            <a href="contato.html" class="botao_contato botao_contato_sobre">Contato</a>
+        </article>
+    </section>
+
+    <section class="noticias">
+    <div class="container_noticias">
+
+        <h2 class="noticias_titulo">Últimos Casos</h2>
+        <div class="linha"></div>
+
+        <div class="carrossel-area">
+            <div class="carrossel-container">
+                <div class="carrossel-grupo" id="grupo-casos">
+
+                    <!-- GRUPO 1 (Primeiros 3 cards) -->
+                    <div class="grupo-cards">
+
+                        <article class="caso_card card">
+                            <img src="img/Devino antreprenor, impreuna este simplu! 1.png" alt="Caso" class="caso_img">
+
+                            <div class="caso_conteudo">
+                                <h3 class="caso_titulo">Quebra de Contrato</h3>
+
+                                <p class="caso_texto">
+                                    Empresa com quebra de contrato sem aviso prévio.
+                                    Atuação ágil para reaver valores.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
+                            </div>
+                        </article>
+
+                        <article class="caso_card card">
+                            <img src="img/Command Your Contracts, Command Your Future 1.png" alt="Caso" class="caso_img">
+
+                            <div class="caso_conteudo">
+                                <h3 class="caso_titulo">Contratos sem Revisão</h3>
+
+                                <p class="caso_texto">
+                                    Contrato sem revisão prévia gera prejuízos financeiros
+                                    e riscos ao negócio.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
+                            </div>
+                        </article>
+
+                        <article class="caso_card card">
+                            <img src="img/transferir (6) 1.png" alt="Caso" class="caso_img">
+
+                            <div class="caso_conteudo">
+                                <h3 class="caso_titulo">Direitos Trabalhistas</h3>
+
+                                <p class="caso_texto">
+                                    Demitida sem justa causa e sem direitos?
+                                    Buscamos a devida reparação na justiça.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+                    <!-- GRUPO 2 (Próximos 3 cards) -->
+                    <div class="grupo-cards">
+
+                        <article class="caso_card card">
+                            <img src="img/Devino antreprenor, impreuna este simplu! 1.png" alt="Caso" class="caso_img">
+
+                            <div class="caso_conteudo">
+                                <h3 class="caso_titulo">Inventário e Partilha</h3>
+
+                                <p class="caso_texto">
+                                    Problemas no inventário familiar?
+                                    Orientação especializada agiliza a partilha.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
+                            </div>
+                        </article>
+
+                        <article class="caso_card card">
+                            <img src="img/Command Your Contracts, Command Your Future 1.png" alt="Caso" class="caso_img">
+
+                            <div class="caso_conteudo">
+                                <h3 class="caso_titulo">Defesa do Consumidor</h3>
+
+                                <p class="caso_texto">
+                                    Consumidor lesado por propaganda enganosa
+                                    tem direito à restituição e danos.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
+                            </div>
+                        </article>
+
+                        <article class="caso_card card">
+                            <img src="img/transferir (6) 1.png" alt="Caso" class="caso_img">
+
+                            <div class="caso_conteudo">
+                                <h3 class="caso_titulo">Cobrança Indevida</h3>
+
+                                <p class="caso_texto">
+                                    Empresa sofreu cobrança indevida?
+                                    Atuação estratégica para blindar o patrimônio.
+                                </p>
+
+                                <a href="#" class="card_link">Saiba mais</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="controles">
+                <button id="anterior-casos" class="botao-redondo">&lt;</button>
+                <button id="proximo-casos" class="botao-redondo">&gt;</button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <section class="container_footer">
+        <article class="footer_info footer_logo">
+            <h2>
+             <a href="inicio.html">
+                <img src="img/logo.png" alt="Logo">
+                </a>
+            </h2>
+            <p>Advocacia com propósito: proteger direitos, construir confiança.</p>
+        </article>
+
+        <nav class="footer_info footer_navegacao">
+            <h2>Navegação</h2>
+            <ul>
+                <li><a href="inicio.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#">Áreas de atuação</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <address class="footer_info footer_contato">
+            <h2>Contato</h2>
+
+            <div class="contato_item">
+                <img src="img/Vector (2).png" alt="Telefone">
+                <p>(11) 9999-9999</p>
+            </div>
+
+            <div class="contato_item">
+                <img src="img/Vector (3).png" alt="E-mail">
+                <p>contato@exemplo.com</p>
+            </div>
+
+            <div class="contato_item">
+                <img src="img/Vector (4).png" alt="Localização">
+                <p>São Paulo, SP</p>
+            </div>
+        </address>
+
+        <article class="footer_info footer_atendimento">
+            <h2>Atendimento</h2>
+            <p>Atendimento online e presencial, agende sua consulta.</p>
+            <a href="#" class="btn_maroon">Consulta</a>
+        </article>
+    </section>
+
+    <nav class="social_links" aria-label="Redes sociais">
+        <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/Instagram (6).png" alt="Instagram"></a>
+        <a href="#"><img src="img/Linkedin (2).png" alt="LinkedIn"></a>
+    </nav>
+</footer>
+
+</body>
+</html>
