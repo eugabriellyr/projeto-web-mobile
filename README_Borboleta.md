@@ -63,6 +63,21 @@ npx create-next-app@latest projeto_borboleta
 _(Durante a configuração inicial, optou-se por utilizar a pasta src/ e o App Router para melhor organização das rotas)._
 
 ### 2. Organização das Pastas e Rotas
-Diferente de um site HTML estático tradicional, o Next.js gerencia as rotas através de pastas e arquivos padronizados dentro do diretório src/app/.
+O projeto foi inicializado utilizando o ecossistema do Next.js, adotando uma organização prática e didática na pasta src/app/ onde cada página do portfólio possui o seu próprio arquivo JavaScript e seu arquivo de estilo modularizado correspondente.
 
-**page.js:** Arquivo principal que renderiza a interface de cada rota utilizando JSX (misturando a marcação estrutural com JavaScript).
+🛠️ Arquivos Criados no Projeto:
+**Página Inicial**
+:Arquivos: inicio.js / inicio.module.css (ou a raiz page.js / page.module.css)
+Porta de entrada institucional, destacando a identidade visual da advogada em tons de bordô e bege, as áreas de atuação e o acesso rápido aos canais de comunicação.
+
+**Página Sobre**
+:Arquivos: sobre.js / sobre.module.css
+Voltada para a construção da presença digital, apresentando a trajetória profissional, formação e o compromisso extensionista da advogada na democratização do acesso à informação jurídica.
+
+**Página de Contato**
+:Arquivos: contato.js / contato.module.css
+Destinada a facilitar o atendimento direto de clientes através de links para o WhatsApp e canais de agendamento rápido.
+
+**Layout Global**
+:Arquivo: layout.js
+Define a estrutura compartilhada e o encapsulamento padrão da aplicação em Next.js.
