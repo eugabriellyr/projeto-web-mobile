@@ -49,3 +49,20 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 - **CSS Modules / Globals.css**: Estilização modularizada e limpa.
 - **API Routes internas do Next.js**: Utilização de arquivos JSON estáticos (mockados) para simular um banco de dados consumido via fetch e manipulado com o hook useEffect no cliente.
 - **Gerenciamento de Estado Nativo**: Uso exclusivo de useState e useEffect para controle de interatividade simples na interface.
+
+---
+
+## 💻 Passo a Passo: Inicialização e Estruturação do Projeto
+
+### 1. Criação do Projeto
+Para iniciar o projeto utilizando o ecossistema do Node.js, executamos o comando de criação do Next.js no terminal:
+```bash
+npx create-next-app@latest projeto_borboleta
+```
+
+_(Durante a configuração inicial, optou-se por utilizar a pasta src/ e o App Router para melhor organização das rotas)._
+
+### 2. Organização das Pastas e Rotas
+Diferente de um site HTML estático tradicional, o Next.js gerencia as rotas através de pastas e arquivos padronizados dentro do diretório src/app/.
+
+**page.js:** Arquivo principal que renderiza a interface de cada rota utilizando JSX (misturando a marcação estrutural com JavaScript).
