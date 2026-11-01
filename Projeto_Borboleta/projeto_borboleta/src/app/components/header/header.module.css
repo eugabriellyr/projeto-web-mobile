@@ -1,0 +1,130 @@
+.header {
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.menu {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 95px;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 175px;
+    height: auto;
+}
+
+.nav_links {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    margin-right: 50px;
+}
+
+.nav_links a {
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav_links a:hover {
+    color: #6F1D1B;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.botao_consulta {
+    background-color: #6F1D1B;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu_hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: #6F1D1B;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header {
+        z-index: 1000;
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .menu_hamburguer {
+        display: block;
+        position: relative;
+        z-index: 100000;
+        border: none;
+        background: transparent;
+        color: #6F1D1B;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .botao_consulta {
+        display: none;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .nav_links.ativo {
+        display: flex;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #ffffff;
+        list-style: none;
+        z-index: 99999;
+    }
+
+    .nav_links.ativo li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav_links.ativo li a {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #333333;
+        text-decoration: none;
+        font-size: 17px;
+    }
+}

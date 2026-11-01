@@ -1,0 +1,150 @@
+
+.footer {
+    background-color: white;
+    color: #6F1D1B;
+    padding: 50px 7% 25px;
+}
+
+.container_footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1.3fr;
+    gap: 50px;
+}
+
+.footer_info h2 {
+    font-family: 'Source Serif 4', serif;
+    color: #6F1D1B;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.footer_info p {
+    color: #432818;
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_logo img {
+    width: 175px;
+    height: auto;
+}
+
+.footer_logo h2 {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_logo p {
+    max-width: 220px;
+}
+
+.footer_navegacao ul {
+    list-style: none;
+}
+
+.footer_navegacao li {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_navegacao a {
+    color: #6F1D1B;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer_navegacao a:hover {
+    color: #c59a45;
+}
+
+.footer_contato {
+    font-style: normal;
+}
+
+.contato_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+
+.contato_item img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.contato_item p {
+    margin: 0;
+}
+
+.footer_atendimento p {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+
+.btn_maroon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6F1D1B;
+    color: #FFF2D2;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn_maroon:hover {
+    background-color: #641818;
+}
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(48, 47, 47, 0.3);
+}
+
+.social_links a {
+    display: flex;
+    align-items: center;
+}
+
+.social_links a:hover {
+    opacity: 0.7;
+}
+
+.social_links img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 25px 25px;
+    }
+
+    .container_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_logo p {
+        max-width: 100%;
+    }
+
+    .footer_atendimento p {
+        max-width: 100%;
+    }
+
+    .social_links {
+        margin-top: 20px;
+    }
+}

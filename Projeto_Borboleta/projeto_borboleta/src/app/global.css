@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D2;
+    color: #4a241b;
+    font-family: var(--font-source-serif), serif;
+}
