@@ -88,7 +88,7 @@ Define a estrutura compartilhada e o encapsulamento padrão da aplicação em Ne
 
 ## 🧩 Componentização
 
-**1. Componente Header (header.jsx)**
+### **1. Componente Header (header.jsx)**
 Gerencia o cabeçalho global e a abertura do menu responsivo via estado nativo (useState).
 
 "use client";
@@ -143,7 +143,7 @@ export default function Header() {
     );
 }
 
-**2. Componente Footer (footer.jsx)**
+### **2. Componente Footer (footer.jsx)**
 Rodapé estruturado contendo links institucionais, dados de contato e redes sociais.
 
 import Link from "next/link";
@@ -216,7 +216,7 @@ export default function Footer() {
     );
 }
 
-**3. Componente Carrossel (carrossel.js)**
+### **3. Componente Carrossel (carrossel.js)**
 Componente reativo para estatísticas numéricas animadas.
 
 "use client";
@@ -359,7 +359,7 @@ export default function Carrossel() {
     );
 }
 
-**4. Componente Contador (contador.js)**
+### **4. Componente Contador (contador.js)**
 Componente reativo para estatísticas numéricas animadas.
 
 "use client";
@@ -387,3 +387,27 @@ export default function Contador({ valorFinal }) {
 
     return <span className={styles.numero_estatistica}>{contador}+</span>;
 }
+
+---
+
+##  Estrutura das Páginas e Implementação
+Utilizamos a organização de rotas no Next.js, onde a página inicial se localiza diretamente na raiz (page.js) e as demais páginas estruturais (/sobre e /contato) utilizam pastas próprias, além da pasta de estilização (/styles) onde se localizam os arquivos de estilo personalizados via CSS Modules.
+
+### 1. Página Inicial / Home (/)
+- Arquivo: src/app/page.js
+- Estilização: src/app/styles/inicio.module.css
+- É a principal porta de entrada institucional do portfólio. A sua estrutura compõe:
+-- Um banner principal (hero) de alto impacto visual destacando o compromisso jurídico.
+-- Uma barra de estatísticas dinâmica e reativa que utiliza o componente Contador (com animações incrementais via hooks) para exibir anos de carreira, clientes atendidos e casos resolvidos.
+-- Uma grelha com as principais Áreas de Atuação do escritório (Defesa do Consumidor, Direito da Família, Direitos Trabalhistas e Legislação Civil).
+-- Uma secção institucional sobre a advogada com checklist de diferenciais e um Carrossel interativo de últimos casos de sucesso.
+
+### 2. Página Sobre (/sobre)
+- Arquivo: src/app/sobre/page.js
+- Estilização: src/app/styles/sobre.module.css
+- Desenvolvida para consolidar a presença digital, credibilidade e a vertente extensionista da profissional. Apresenta detalhadamente a trajetória da advogada, os seus valores éticos, o compromisso social em democratizar o acesso à informação jurídica e cards informativos com as especialidades jurídicas oferecidas à comunidade.
+
+### 3. Página de Contato (/contato)
+- Arquivo: src/app/contato/page.js
+- Estilização: src/app/contato.module.css
+- Projetada para estreitar os canais de comunicação com os clientes. Contém informações estruturadas de atendimento (telefone, e-mail e endereço físico), ícones de redirecionamento para redes sociais e um formulário interativo de agendamento de consultas.
