@@ -1,4 +1,7 @@
+
 import styles from "./styles/inicio.module.css";
+import Link from "next/link";
+
 import Contador from "./components/contador/contador";
 import Carrossel from "./components/carrossel/carrossel";
 
@@ -22,12 +25,12 @@ export default function Home() {
                             cliente.
                         </p>
 
-                        <a
+                        <Link
                             href="/contato"
                             className={`${styles.botao_contato} ${styles.botao_contato_principal}`}
                         >
                             Contato
-                        </a>
+                        </Link>
                     </div>
 
                     <div className={styles.container_hero_imagens}>
@@ -98,7 +101,9 @@ export default function Home() {
 
             <section className={styles.areas_atuacao}>
                 <article className={styles.container_areas}>
-                    <h1 className={styles.titulo_areas}>Áreas de Atuação</h1>
+                    <h1 className={styles.titulo_areas}>
+                        Áreas de Atuação
+                    </h1>
 
                     <div className={styles.linha}></div>
 
@@ -109,15 +114,21 @@ export default function Home() {
                                 alt="Ícone Defesa do Consumidor"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Defesa do Consumidor
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos nas relações de consumo.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link
+                                href="/casos_resolvidos/defesa-do-consumidor"
+                                className={styles.link_cartao}
+                            >
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
 
                         <article className={styles.cartao}>
@@ -126,15 +137,21 @@ export default function Home() {
                                 alt="Ícone Direito da Família"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Direito da Família
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos nas relações de família.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link
+                                href="/casos_resolvidos/direito-da-familia"
+                                className={styles.link_cartao}
+                            >
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
 
                         <article className={styles.cartao}>
@@ -143,15 +160,21 @@ export default function Home() {
                                 alt="Ícone Direitos Trabalhistas"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Direitos Trabalhistas
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos nas relações trabalhistas.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link
+                                href="/casos_resolvidos/direitos-trabalhistas"
+                                className={styles.link_cartao}
+                            >
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
 
                         <article className={styles.cartao}>
@@ -160,15 +183,21 @@ export default function Home() {
                                 alt="Ícone Legislação Civil"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Legislação Civil
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos na área civil.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link
+                                href="/casos_resolvidos/legislacao-civil"
+                                className={styles.link_cartao}
+                            >
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
                     </div>
                 </article>
@@ -176,11 +205,16 @@ export default function Home() {
 
             <section className={styles.sobre}>
                 <figure className={styles.img_advogada}>
-                    <img src="/img/advogada.jpeg" alt="Foto da advogada" />
+                    <img
+                        src="/img/advogada.jpeg"
+                        alt="Foto da advogada"
+                    />
                 </figure>
 
                 <article className={styles.sobre_texto}>
-                    <h2 className={styles.sobre_titulo}>Sobre a Doutora</h2>
+                    <h2 className={styles.sobre_titulo}>
+                        Sobre a Doutora
+                    </h2>
 
                     <div className={styles.linha}></div>
 
@@ -195,28 +229,32 @@ export default function Home() {
                             <img src="/img/Check.png" alt="" />
                             Atendimento humanizado;
                         </li>
+
                         <li>
                             <img src="/img/Check.png" alt="" />
                             Compromisso com o cliente;
                         </li>
+
                         <li>
                             <img src="/img/Check.png" alt="" />
                             Transparência e ética profissional.
                         </li>
                     </ul>
 
-                    <a
+                    <Link
                         href="/contato"
                         className={`${styles.botao_contato} ${styles.botao_contato_sobre}`}
                     >
                         Contato
-                    </a>
+                    </Link>
                 </article>
             </section>
 
             <section className={styles.noticias}>
                 <div className={styles.container_noticias}>
-                    <h2 className={styles.noticias_titulo}>Últimos Casos</h2>
+                    <h2 className={styles.noticias_titulo}>
+                        Últimos Casos
+                    </h2>
 
                     <div className={styles.linha}></div>
 
