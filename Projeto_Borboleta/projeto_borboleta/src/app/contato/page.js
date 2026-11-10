@@ -1,105 +1,103 @@
-/*import Image from 'next/image';
+'use client';
+
+import Image from 'next/image';
 import Link from 'next/link';
-import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
+import styles from '../styles/contato.module.css';
 
 export default function Contato() {
     return (
         <>
-            <Header />
-
-            <section className="hero_contato w-full h-[350px] md:h-[485px] relative overflow-hidden flex items-center justify-center text-center">
+            <section className={styles.hero_contato}>
                 <Image
                     src="/img/background-contato.png"
                     alt="Livros e símbolo da justiça"
-                    fill
+                    width={1920}
+                    height={485}
                     priority
-                    className="object-cover object-center absolute z-0"
                 />
-                <div className="absolute inset-0 bg-[#281711]/[0.48] z-1" />
-                <div className="hero_conteudo relative z-2 text-white px-5 mt-0 md:-mt-[50px]">
-                    <h1 className="font-['Source_Serif_4'] text-[38px] md:text-[58px] font-bold mb-[15px]">Entre em contato!</h1>
-                    <p className="max-w-[750px] text-[14px] md:text-[16px] font-medium leading-[1.6] mx-auto">
+                <div className={styles.hero_conteudo}>
+                    <h1>Entre em contato!</h1>
+                    <p>
                         Entre em contato e agende uma conversa para entender seus direitos e encontrar o melhor caminho para o seu caso.
                     </p>
                 </div>
             </section>
 
             <main>
-                <section className="area-contato bg-[#FFF2D2] pb-[100px]">
-                    <div className="container-contato w-[90%] md:w-[78%] max-w-[1100px] min-h-[620px] -mt-[70px] md:-mt-[110px] mx-auto relative z-3 bg-[#fff1cf] rounded-[14px] shadow-[0_3px_8px_rgba(0,0,0,0.20)] grid grid-cols-1 md:grid-cols-[1fr_1.25fr] p-[35px_25px] md:p-[52px_50px]">
+                <section className={styles.area_contato}>
+                    <div className={styles.container_contato}>
 
-                        <div className="informacoes pr-0 md:pr-[45px] pb-[35px] md:pb-0 border-b md:border-b-0 md:border-r border-[#8a6257]">
-                            <h2 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[24px] md:text-[28px] font-bold leading-[1.25] mb-[14px]">Informações de contato</h2>
-                            <p className="descricao text-[13px] leading-[1.5] mb-[30px]">
+                        <div className={styles.informacoes}>
+                            <h2>Informações de contato</h2>
+                            <p className={styles.descricao}>
                                 Precisa de orientação? Estamos prontas para ouvir você.
                             </p>
 
-                            <div className="informacao flex items-center gap-[15px] mb-[27px]">
-                                <Link href="#"><Image src="/img/Telefone.png" alt="Telefone" width={48} height={48} className="w-[48px] h-[48px] object-contain" /></Link>
-                                <div className="texto-informacao">
-                                    <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[17px] font-normal mb-[3px]">Telefone</h3>
-                                    <p className="text-[13px]">(11) 9999-9999</p>
+                            <div className={styles.informacao}>
+                                <Link href="#"><Image src="/img/Telefone.png" alt="Telefone" width={48} height={48} /></Link>
+                                <div className={styles.texto_informacao}>
+                                    <h3>Telefone</h3>
+                                    <p>(11) 9999-9999</p>
                                 </div>
                             </div>
 
-                            <div className="informacao flex items-center gap-[15px] mb-[27px]">
-                                <Link href="#"><Image src="/img/E-mail.png" alt="E-mail" width={48} height={48} className="w-[48px] h-[48px] object-contain" /></Link>
-                                <div className="texto-informacao">
-                                    <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[17px] font-normal mb-[3px]">Email</h3>
-                                    <p className="text-[13px]">exemplo@contato.com</p>
+                            <div className={styles.informacao}>
+                                <Link href="#"><Image src="/img/E-mail.png" alt="E-mail" width={48} height={48} /></Link>
+                                <div className={styles.texto_informacao}>
+                                    <h3>Email</h3>
+                                    <p>exemplo@contato.com</p>
                                 </div>
                             </div>
 
-                            <div className="informacao flex items-center gap-[15px] mb-[27px]">
-                                <Link href="#"><Image src="/img/Localização.png" alt="Endereço" width={48} height={48} className="w-[48px] h-[48px] object-contain" /></Link>
-                                <div className="texto-informacao">
-                                    <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[17px] font-normal mb-[3px]">Endereço</h3>
-                                    <p className="text-[13px]">Rua Exemplo, Nº 123</p>
+                            <div className={styles.informacao}>
+                                <Link href="#"><Image src="/img/Localização.png" alt="Endereço" width={48} height={48} /></Link>
+                                <div className={styles.texto_informacao}>
+                                    <h3>Endereço</h3>
+                                    <p>Rua Exemplo, Nº 123</p>
                                 </div>
                             </div>
 
-                            <div className="redes mt-[32px]">
-                                <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[16px] mb-[12px]">Siga minhas redes sociais</h3>
-                                <div className="redes-icons flex gap-[20px]">
-                                    <Link href="#" className="w-[31px] h-[31px] flex items-center justify-center rounded-full bg-[#6F1D1B] text-white hover:bg-[#5a1715] hover:-translate-y-0.5 transition-all"><Image src="/img/Instagram.png" alt="Instagram" width={31} height={31} className="w-[31px] h-[31px] object-contain" /></Link>
-                                    <Link href="#" className="w-[31px] h-[31px] flex items-center justify-center rounded-full bg-[#6F1D1B] text-white hover:bg-[#5a1715] hover:-translate-y-0.5 transition-all"><Image src="/img/Twitter.png" alt="Twitter" width={31} height={31} className="w-[31px] h-[31px] object-contain" /></Link>
-                                    <Link href="#" className="w-[31px] h-[31px] flex items-center justify-center rounded-full bg-[#6F1D1B] text-white hover:bg-[#5a1715] hover:-translate-y-0.5 transition-all"><Image src="/img/Facebook (1).png" alt="Facebook" width={31} height={31} className="w-[31px] h-[31px] object-contain" /></Link>
+                            <div className={styles.redes}>
+                                <h3>Siga minhas redes sociais</h3>
+                                <div className={styles.redes_icons}>
+                                    <Link href="#"><Image src="/img/Instagram.png" alt="Instagram" width={31} height={31} /></Link>
+                                    <Link href="#"><Image src="/img/Twitter.png" alt="Twitter" width={31} height={31} /></Link>
+                                    <Link href="#"><Image src="/img/Facebook (1).png" alt="Facebook" width={31} height={31} /></Link>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="formulario pl-0 md:pl-[50px] pt-[35px] md:pt-0">
-                            <h2 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[24px] md:text-[28px] font-bold mb-[28px]">Agende uma consulta</h2>
+                        <div className={styles.formulario}>
+                            <h2>Agende uma consulta</h2>
 
                             <form onSubmit={(e) => e.preventDefault()}>
-                                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                                    <i className="fa-regular fa-user text-[15px] text-[#222] shrink-0"></i>
-                                    <input type="text" name="nome" placeholder="Nome" required className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
+                                <div className={styles.campo}>
+                                    <i className="fa-regular fa-user"></i>
+                                    <input type="text" name="nome" placeholder="Nome" required />
                                 </div>
 
-                                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                                    <i className="fa-regular fa-envelope text-[15px] text-[#222] shrink-0"></i>
-                                    <input type="email" name="email" placeholder="Email" required className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
+                                <div className={styles.campo}>
+                                    <i className="fa-regular fa-envelope"></i>
+                                    <input type="email" name="email" placeholder="Email" required />
                                 </div>
 
-                                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                                    <i className="fa-solid fa-phone text-[15px] text-[#222] shrink-0"></i>
-                                    <input type="tel" name="telefone" placeholder="Telefone" className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
+                                <div className={styles.campo}>
+                                    <i className="fa-solid fa-phone"></i>
+                                    <input type="tel" name="telefone" placeholder="Telefone" />
                                 </div>
 
-                                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                                    <i className="fa-regular fa-calendar text-[15px] text-[#222] shrink-0"></i>
-                                    <input type="date" name="data" className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
+                                <div className={styles.campo}>
+                                    <i className="fa-regular fa-calendar"></i>
+                                    <input type="date" name="data" />
                                 </div>
 
-                                <div className="campo mensagem w-full h-[100px] flex items-start gap-[13px] px-[17px] pt-[14px] mb-[23px] bg-white rounded-[4px]">
-                                    <i className="fa-regular fa-comment text-[15px] text-[#222] shrink-0"></i>
-                                    <textarea name="mensagem" placeholder="Mensagem" className="w-full h-[75px] border-none outline-none resize-none font-['Poppins'] text-[13px] bg-transparent text-[#333] placeholder:text-[#333]"></textarea>
+                                <div className={`${styles.campo} ${styles.mensagem}`}>
+                                    <i className="fa-regular fa-comment"></i>
+                                    <textarea name="mensagem" placeholder="Mensagem"></textarea>
                                 </div>
 
-                                <div className="area-botao flex justify-center md:justify-end">
-                                    <button type="submit" className="border-none bg-[#6F1D1B] text-white py-[11px] px-[22px] rounded-[5px] font-['Source_Serif_4'] font-bold cursor-pointer transition-all hover:bg-[#5a1715]">
+                                <div className={styles.area_botao}>
+                                    <button type="submit">
                                         Enviar
                                     </button>
                                 </div>
@@ -109,9 +107,6 @@ export default function Contato() {
                     </div>
                 </section>
             </main>
-
-            <Footer />
         </>
     );
 }
-*/
