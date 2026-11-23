@@ -1,10 +1,38 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/contato.module.css';
 
 export default function Contato() {
+    const [status, setStatus] = useState('');
+
+    async function enviar(e) {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const dados = Object.fromEntries(new FormData(form));
+
+        setStatus('Enviando...');
+
+        try {
+            const res = await fetch('/api/contato', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados),
+            });
+
+            if (res.ok) {
+                setStatus('Mensagem enviada com sucesso!');
+                form.reset();
+            } else {
+                setStatus('Erro ao enviar. Tente novamente.');
+            }
+        } catch {
+            setStatus('Erro de conexão. Tente novamente.');
+        }
+    }
+
     return (
         <>
             <section className={styles.hero_contato}>
@@ -70,7 +98,7 @@ export default function Contato() {
                         <div className={styles.formulario}>
                             <h2>Agende uma consulta</h2>
 
-                            <form onSubmit={(e) => e.preventDefault()}>
+                            <form onSubmit={enviar}>
                                 <div className={styles.campo}>
                                     <i className="fa-regular fa-user"></i>
                                     <input type="text" name="nome" placeholder="Nome" required />
@@ -101,6 +129,8 @@ export default function Contato() {
                                         Enviar
                                     </button>
                                 </div>
+
+                                {status && <p>{status}</p>}
                             </form>
                         </div>
 

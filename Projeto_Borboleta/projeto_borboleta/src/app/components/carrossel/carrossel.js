@@ -1,58 +1,24 @@
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "../../styles/inicio.module.css";
 
-const casos = [
-    {
-        slug: "quebra-de-contrato",
-        titulo: "Quebra de Contrato",
-        texto: "Empresa com quebra de contrato sem aviso prévio. Atuação ágil para reaver valores.",
-        img: "/img/Devino antreprenor, impreuna este simplu! 1.png",
-    },
-    {
-        slug: "contratos-sem-revisao",
-        titulo: "Contratos sem Revisão",
-        texto: "Contrato sem revisão prévia gera prejuízos financeiros e riscos ao negócio.",
-        img: "/img/Command Your Contracts, Command Your Future 1.png",
-    },
-    {
-        slug: "direitos-trabalhistas",
-        titulo: "Direitos Trabalhistas",
-        texto: "Demitida sem justa causa e sem direitos? Buscamos a devida reparação na justiça.",
-        img: "/img/transferir (6) 1.png",
-    },
-    {
-        slug: "inventario-e-partilha",
-        titulo: "Inventário e Partilha",
-        texto: "Problemas no inventário familiar? Orientação especializada agiliza a partilha.",
-        img: "/img/Devino antreprenor, impreuna este simplu! 1.png",
-    },
-    {
-        slug: "defesa-do-consumidor",
-        titulo: "Defesa do Consumidor",
-        texto: "Consumidor lesado por propaganda enganosa tem direito à restituição e danos.",
-        img: "/img/Command Your Contracts, Command Your Future 1.png",
-    },
-    {
-        slug: "cobranca-indevida",
-        titulo: "Cobrança Indevida",
-        texto: "Empresa sofreu cobrança indevida? Atuação estratégica para blindar o patrimônio.",
-        img: "/img/transferir (6) 1.png",
-    },
-];
-
-const grupos = [];
-
-for (let i = 0; i < casos.length; i += 3) {
-    grupos.push(casos.slice(i, i + 3));
-}
-
 export default function Carrossel() {
     const grupoRef = useRef(null);
     const [indice, setIndice] = useState(0);
+    const [casos, setCasos] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/casos")
+            .then((res) => res.json())
+            .then((dados) => setCasos(dados.slice(0, 6)));
+    }, []);
+
+    const grupos = [];
+    for (let i = 0; i < casos.length; i += 3) {
+        grupos.push(casos.slice(i, i + 3));
+    }
 
     function atualizar(novoIndice) {
         const grupo = grupoRef.current;
@@ -70,7 +36,7 @@ export default function Carrossel() {
 
     useEffect(() => {
         atualizar(indice);
-    }, [indice]);
+    }, [indice, casos]);
 
     useEffect(() => {
         function aoRedimensionar() {
@@ -114,7 +80,7 @@ export default function Carrossel() {
                                 <article
                                     className={styles.caso_card}
                                     data-card
-                                    key={caso.titulo}
+                                    key={caso.slug}
                                 >
                                     <img
                                         className={styles.caso_img}

@@ -1,30 +1,28 @@
-
 "use client";
 
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./caso.module.css";
 
-const titulos = {
-    "quebra-de-contrato": "Quebra de Contrato",
-    "contratos-sem-revisao": "Contratos sem Revisão",
-    "direitos-trabalhistas": "Direitos Trabalhistas",
-    "inventario-e-partilha": "Inventário e Partilha",
-    "defesa-do-consumidor": "Defesa do Consumidor",
-    "cobranca-indevida": "Cobrança Indevida",
-    "direito-da-familia": "Direito da Família",
-    "legislacao-civil": "Legislação Civil",
-};
-
 export default function CasoPage() {
-    const params = useParams();
-    const slug = params.slug;
+    const { slug } = useParams();
 
-    const titulo = titulos[slug];
-
+    const [caso, setCaso] = useState(null);
+    const [carregando, setCarregando] = useState(true);
     const [abaAtiva, setAbaAtiva] = useState("descricao");
 
-    if (!titulo) {
+    useEffect(() => {
+        fetch(`/api/casos/${slug}`)
+            .then((res) => (res.ok ? res.json() : null))
+            .then((dados) => setCaso(dados))
+            .finally(() => setCarregando(false));
+    }, [slug]);
+
+    if (carregando) {
+        return <div>Carregando...</div>;
+    }
+
+    if (!caso) {
         return <div>Conteúdo não encontrado.</div>;
     }
 
@@ -35,8 +33,8 @@ export default function CasoPage() {
 
                 <div className={styles.caso_imagem}>
                     <img
-                        src="/img/Command Your Contracts, Command Your Future 1.png"
-                        alt="Ambiente de trabalho jurídico"
+                        src={caso.img}
+                        alt={caso.titulo}
                     />
 
                     <div className={styles.detalhe_imagem}></div>
@@ -51,7 +49,7 @@ export default function CasoPage() {
                     </div>
 
                     <h1 className={styles.caso_titulo}>
-                        {titulo}
+                        {caso.titulo}
                     </h1>
 
                     <nav className={styles.caso_abas}>
@@ -82,33 +80,15 @@ export default function CasoPage() {
                         {abaAtiva === "descricao" && (
                             <section>
                                 <h2>Desafio</h2>
-
-                                <p>
-                                    Apresente aqui o contexto do caso,
-                                    explicando a situação inicial,
-                                    os problemas identificados e
-                                    os desafios enfrentados pelo cliente.
-                                </p>
+                                <p>{caso.desafio}</p>
 
                                 <h2>Estratégia Jurídica</h2>
-
                                 <ul>
-                                    <li>
-                                        <strong>Análise:</strong> descrição
-                                        da análise realizada para identificar
-                                        os principais pontos do caso.
-                                    </li>
-
-                                    <li>
-                                        <strong>Planejamento:</strong> descrição
-                                        das medidas jurídicas adotadas.
-                                    </li>
-
-                                    <li>
-                                        <strong>Atuação:</strong> apresentação
-                                        das estratégias utilizadas durante
-                                        o atendimento.
-                                    </li>
+                                    {caso.estrategia.map((item) => (
+                                        <li key={item.titulo}>
+                                            <strong>{item.titulo}:</strong> {item.descricao}
+                                        </li>
+                                    ))}
                                 </ul>
                             </section>
                         )}
@@ -116,26 +96,15 @@ export default function CasoPage() {
                         {abaAtiva === "resultado" && (
                             <section>
                                 <h2>Resultado alcançado</h2>
-
-                                <p>
-                                    Apresente aqui os resultados obtidos
-                                    com a atuação jurídica e as soluções
-                                    encontradas para o caso.
-                                </p>
+                                <p>{caso.resultado}</p>
 
                                 <h2>Impactos</h2>
-
                                 <ul>
-                                    <li>
-                                        <strong>Segurança:</strong> solução
-                                        dos pontos identificados.
-                                    </li>
-
-                                    <li>
-                                        <strong>Resolução:</strong> medidas
-                                        adotadas para atender aos objetivos
-                                        do cliente.
-                                    </li>
+                                    {caso.impactos.map((item) => (
+                                        <li key={item.titulo}>
+                                            <strong>{item.titulo}:</strong> {item.descricao}
+                                        </li>
+                                    ))}
                                 </ul>
                             </section>
                         )}
@@ -143,12 +112,7 @@ export default function CasoPage() {
                         {abaAtiva === "feedback" && (
                             <section>
                                 <h2>Feedback do Cliente</h2>
-
-                                <p>
-                                    Espaço destinado ao depoimento
-                                    e à experiência do cliente após
-                                    a conclusão do caso.
-                                </p>
+                                <p>{caso.feedback}</p>
                             </section>
                         )}
 

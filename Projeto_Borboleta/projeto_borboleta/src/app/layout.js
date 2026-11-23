@@ -20,8 +20,8 @@ const sourceSerif = Source_Serif_4({
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="pt-BR" className={`${poppins.variable} ${sourceSerif.variable}`}>
-            <body>
+       <html lang="pt-BR" className={`${poppins.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
+            <body suppressHydrationWarning>
                 <Header />
                 {children}
                 <Footer />
