@@ -26,9 +26,6 @@ Por meio do site, conceitos e estudos de casos jurídicos são apresentados de f
 Nesse sentido, o caráter extensionista do projeto está na integração entre tecnologia, conhecimento jurídico e demandas da comunidade, utilizando os recursos digitais como ferramentas de comunicação, inclusão e transformação social.
 
 ## 📘 Aprendizados adquiridos
----
-
-## 🎓 Aprendizados Adquiridos
 O desenvolvimento do **Projeto Borboleta** consolidou na prática a transição de páginas web estáticas (*Projeto Lagarta*) para uma aplicação full-stack moderna, unindo engenharia de software, experiência do usuário e impacto social:
 
 - **Migração de Arquitetura Estática para Componentizada (React & Next.js)**: Compreensão prática de como quebrar interfaces extensas em componentes independentes e reutilizáveis (`Header`, `Footer`, `Carrossel`, `Contador` e `Form`), além do uso do `layout.js` com `{children}` para evitar repetição de estrutura entre páginas.
