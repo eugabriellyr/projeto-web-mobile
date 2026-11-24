@@ -29,14 +29,18 @@ Nesse sentido, o caráter extensionista do projeto está na integração entre t
 O desenvolvimento do **Projeto Borboleta** consolidou na prática a transição de páginas web estáticas (*Projeto Lagarta*) para uma aplicação full-stack moderna, unindo engenharia de software, experiência do usuário e impacto social:
 
 - **Migração de Arquitetura Estática para Componentizada (React & Next.js)**: Compreensão prática de como quebrar interfaces extensas em componentes independentes e reutilizáveis (`Header`, `Footer`, `Carrossel`, `Contador` e `Form`), além do uso do `layout.js` com `{children}` para evitar repetição de estrutura entre páginas.
+  
 - **Roteamento Baseado em Pastas e Rotas Dinâmicas (App Router)**: Domínio da organização de rotas estáticas (`/`, `/sobre`, `/contato`) e dinâmicas (`/casos_resolvidos/[slug]`), utilizando o hook `useParams()` para capturar parâmetros da URL e renderizar conteúdos sob demanda.
+  
 - **Gerenciamento de Estado e Interatividade com Hooks Nativos**: Aplicação de `useState`, `useEffect` e `useRef` para controlar comportamentos reais de interface, incluindo menu mobile responsivo, contadores animados (`setInterval`), navegação por abas, cálculo de largura e deslizamento de slides (`translateX`) e validação/feedback de envio de formulários.
+  
 - **Desenvolvimento e Consumo de APIs Internas (API Routes)**: Criação de endpoints RESTful (`GET /api/casos`, `GET /api/casos/[slug]` e `POST /api/contato`) integrados ao back-end Node.js do Next.js, utilizando os módulos `fs` e `path` para leitura e gravação persistente em arquivos JSON (`casos.json` e `mensagens.json`), bem como o consumo assíncrono via `fetch` e `FormData`.
+  
 - **Isolamento de Estilos e Design Responsivo (CSS Modules)**: Uso de CSS Modules (`*.module.css`) para evitar conflitos de classes globais, combinando Flexbox, CSS Grid, pseudo-elementos decorativos e `@media` queries para garantir legibilidade e adaptação fluida entre dispositivos móveis e desktops.
+  
 - **Alinhamento entre Tecnologia, UX/UI e Extensão Universitária**: Experiência em projetar uma solução digital voltada a uma demanda real da comunidade, traduzindo informações jurídicas em uma navegação clara, acessível e humanizada para ampliar o acesso à informação sobre direitos.
+  
 - **Organização de Código e Documentação Técnica**: Estruturação padronizada de diretórios (`components/`, `styles/`, `api/`, `data/`), trabalho em equipe com versionamento no GitHub e elaboração de documentação técnica clara para manutenção e apresentação do projeto.
-
----
 
 ## 💡 Processo de Ideação
 A concepção desta nova versão partiu da necessidade de transformar um site estático em uma aplicação web reativa, dinâmica e escalável.
