@@ -1,31 +1,40 @@
-# 🦋 Projeto 2 (Next.js & React)
+# 🦋 Projeto 2 — Projeto Borboleta (Next.js & React)
 
-> O Projeto Borboleta representa a evolução do Projeto Lagarta, onde irá ser migrado a aplicação da estrutura estática em HTML/CSS para uma estrutura baseada em componentização, ao reutilizar componentes, com React e o framework Next.js.
+> O **Projeto Borboleta** representa a evolução do **Projeto Lagarta**, migrando a aplicação de uma estrutura estática em HTML/CSS tradicional para uma arquitetura moderna baseada em componentização, reutilização de código, rotas dinâmicas e consumo de APIs internas com **React** e o framework **Next.js**.
+
+| Aspecto | Detalhamento |
+| :--- | :--- |
+| **Projeto / Domínio** | Projeto Borboleta (Projeto 2) — Site Institucional e Portfólio Jurídico Extensionista |
+| **Stack Tecnológica** | Next.js (App Router), React (`useState`, `useEffect`, `useRef`), CSS Modules, Google Fonts, Node.js (`fs` / `path`) |
+| **Rotas Front-End** | `/` (Home), `/sobre` (Sobre a Advogada), `/contato` (Atendimento e Formulário), `/casos_resolvidos/[slug]` (Dinâmica) |
+| **Endpoints Back-End** | `GET /api/casos`, `GET /api/casos/[slug]`, `POST /api/contato` (persistência simulada em `src/data/*.json`) |
+
+---
 
 ## ⚖️ Portfólio Jurídico
-Site institucional e portfólio profissional desenvolvido para uma advogada em início de carreira, com o objetivo de divulgar seus serviços, construir presença digital e oferecer conteúdos informativos sobre direitos.
+Site institucional e portfólio profissional desenvolvido para uma advogada em início de carreira (**Dra. Luciana**), com o objetivo de divulgar seus serviços, construir presença digital sólida e oferecer conteúdos informativos acessíveis sobre direitos.
 
 ## 🚀 Objetivos
-Divulgação Profissional: Apresentar a trajetória e as áreas de atuação da advogada.
-Atendimento Fácil: Facilitar o contato de clientes via WhatsApp e canais diretos de agendamento.
+- **Divulgação Profissional**: Apresentar a trajetória, os valores éticos, métricas de atendimento e as áreas de atuação da advogada.
+- **Atendimento Fácil**: Facilitar o contato direto de clientes por meio de canais de comunicação claros e um formulário interativo de agendamento de consultas.
 
 ## 🏛️ Caráter Extensionista
 O projeto utiliza a tecnologia como instrumento de apoio ao início da carreira profissional da advogada e, ao mesmo tempo, como meio de aproximar os serviços jurídicos da comunidade. A proposta parte da compreensão de que o acesso à Justiça também envolve o acesso à informação e ao conhecimento sobre direitos, buscando reduzir as barreiras impostas pela complexidade da linguagem jurídica.
 
-Por meio do site, conceitos e informações jurídicas são apresentados de forma clara e acessível, criando um canal de comunicação mais próximo entre a profissional e a sociedade. Dessa forma, a plataforma não se limita à divulgação dos serviços, mas contribui para a democratização do conhecimento jurídico e para o fortalecimento da autonomia dos cidadãos na compreensão de seus direitos e na busca por orientação adequada.
+Por meio do site, conceitos e estudos de casos jurídicos são apresentados de forma clara e acessível, criando um canal de comunicação mais próximo entre a profissional e a sociedade. Dessa forma, a plataforma não se limita à divulgação dos serviços, mas contribui para a democratização do conhecimento jurídico e para o fortalecimento da autonomia dos cidadãos na compreensão de seus direitos e na busca por orientação adequada.
 
 Nesse sentido, o caráter extensionista do projeto está na integração entre tecnologia, conhecimento jurídico e demandas da comunidade, utilizando os recursos digitais como ferramentas de comunicação, inclusão e transformação social.
+
+---
 
 ## 💡 Processo de Ideação
 A concepção desta nova versão partiu da necessidade de transformar um site estático em uma aplicação web reativa, dinâmica e escalável.
 
-**Público-Alvo**: Clientes em potencial que buscam segurança jurídica, além de cidadãos interessados em tirar dúvidas rápidas sobre direitos e deveres.
-
-**Experiência do Usuário (UX/UI)**:
-Priorizou-se uma navegação fluida, intuitiva e responsiva (adaptada para dispositivos móveis e desktops).
-Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, mantendo a paleta de cores institucional baseada em tons de bordô e bege.
-
-**Estratégia Tecnológica**: Planejamento da arquitetura em componentes (separação de cabeçalhos, rodapés, cards de serviços e seções informativas) e estruturação de rotas estáticas e dinâmicas utilizando o Next.js.
+- **Público-Alvo**: Clientes em potencial que buscam segurança jurídica (pessoas físicas e empresas), além de cidadãos interessados em tirar dúvidas rápidas sobre direitos e deveres.
+- **Experiência do Usuário (UX/UI)**:
+  - Navegação fluida, intuitiva e totalmente responsiva (adaptada para dispositivos móveis, tablets e desktops).
+  - Identidade visual sóbria, elegante e de alta confiabilidade, baseada em tons de bordô (`#6F1D1B`), bege/creme (`#FFF2D2`), marrom escuro (`#432818`) e dourado (`#BB9457`), combinada com as tipografias **Source Serif 4** (títulos) e **Poppins** (textos corridos).
+- **Estratégia Tecnológica**: Planejamento da arquitetura em componentes reutilizáveis (`Header`, `Footer`, `Carrossel`, `Contador` e `Form`), estilização isolada via CSS Modules e estruturação de rotas estáticas e dinâmicas com API Routes no Next.js.
 
 ## 🎨 Protótipo e Planejamento Visual
 
@@ -35,133 +44,756 @@ Escolha de uma identidade visual sóbria, elegante e de alta confiabilidade, man
 <img width="30%" height="30%" alt="AboutPage (1)" src="https://github.com/user-attachments/assets/9ee62ef4-cc1e-4c81-9305-09be4d599543" />
 
 ---
-  
-🛠️ **Tecnologias Escolhidas**
-- **Next.js**: Framework React para otimização de rotas e renderização.
-- **CSS Modules / Globals.css**: Estilização modularizada e limpa.
-- **API Routes internas do Next.js**: Utilização de arquivos JSON estáticos (mockados) para simular um banco de dados consumido via fetch e manipulado com o hook useEffect no cliente.
-- **Gerenciamento de Estado Nativo**: Uso exclusivo de useState e useEffect para controle de interatividade simples na interface.
+
+## 🛠️ Tecnologias Escolhidas
+- **Next.js (App Router)**: Framework React responsável pelo roteamento baseado em pastas, otimização de fontes/imagens e criação de endpoints de back-end (`API Routes`).
+- **React (Hooks Nativos)**: Uso exclusivo de `useState`, `useEffect` e `useRef` para controle de menu mobile, animações numéricas, navegação de slides, consumo de APIs e envio de formulários.
+- **CSS Modules & `global.css`**: Estilização modularizada por página e componente (`*.module.css`), evitando conflitos de classes e garantindo responsividade via `@media` queries.
+- **API Routes & JSON Mockado**: Endpoints internos em `src/app/api/` que leem e gravam dados em arquivos JSON (`casos.json` e `mensagens.json`), simulando um banco de dados completo.
 
 ---
 
 ## 💻 Passo a Passo: Inicialização e Estruturação do Projeto
 
 ### 1. Criação do Projeto
-Para iniciar o projeto utilizando o ecossistema do Node.js, executamos o comando de criação do Next.js no terminal:
+Para iniciar o projeto utilizando o ecossistema do Node.js, executamos o comando oficial de criação do Next.js no terminal:
+
 ```bash
 npx create-next-app@latest projeto_borboleta
 ```
 
-_(Durante a configuração inicial, optou-se por utilizar a pasta src/ e o App Router para melhor organização das rotas)._
+*(Durante a configuração inicial, optou-se por utilizar a pasta `src/` e o **App Router** para melhor organização das rotas).*
 
-### 2. Organização das Pastas e Rotas
-O projeto foi inicializado utilizando o ecossistema do Next.js, adotando uma organização prática e didática na pasta src/app/ onde cada página do portfólio possui o seu próprio arquivo JavaScript e seu arquivo de estilo modularizado correspondente.
+### 2. Organização Completa das Pastas e Rotas
+Abaixo está a estrutura completa e atualizada do projeto dentro de `projeto_borboleta/`:
 
-#### 🛠️ Arquivos Criados no Projeto:
-**Página Inicial**
-
-_inicio.js / inicio.module.css_ (ou a raiz page.js / page.module.css):
-Porta de entrada institucional, destacando a identidade visual da advogada em tons de bordô e bege, as áreas de atuação e o acesso rápido aos canais de comunicação.
-
----
-
-**Página Sobre**
-
-_sobre.js / sobre.module.css_:
-Voltada para a construção da presença digital, apresentando a trajetória profissional, formação e o compromisso extensionista da advogada na democratização do acesso à informação jurídica.
-
----
-
-**Página de Contato**
-
-_contato.js / contato.module.css_:
-Destinada a facilitar o atendimento direto de clientes através de links para o WhatsApp e canais de agendamento rápido.
-
----
-
-**Layout Global**
-
-_layout.js_:
-Define a estrutura compartilhada e o encapsulamento padrão da aplicação em Next.js.
-
----
-
-## 🧩 Componentização
-
-### **1. Componente Header (header.jsx)**
-Gerencia o cabeçalho global e a abertura do menu responsivo via estado nativo (useState).
-
+```text
+projeto_borboleta/
+├── public/
+│   └── img/                          # Imagens, ícones, logotipos e fotos do portfólio
+└── src/
+    ├── app/
+    │   ├── api/                      # Camada de Backend interno (API Routes do Next.js)
+    │   │   ├── casos/
+    │   │   │   ├── [slug]/
+    │   │   │   │   └── route.js      # Endpoint GET: busca um caso específico pelo slug
+    │   │   │   └── route.js          # Endpoint GET: retorna a lista completa de casos
+    │   │   └── contato/
+    │   │       └── route.js          # Endpoint POST: valida e salva mensagens no JSON
+    │   ├── casos_resolvidos/
+    │   │   └── [slug]/
+    │   │       ├── caso.module.css   # Estilização modular da página de detalhes do caso
+    │   │       └── page.jsx          # Página dinâmica de estudo de caso (/casos_resolvidos/[slug])
+    │   ├── components/               # Componentes reutilizáveis da interface
+    │   │   ├── carrossel/
+    │   │   │   └── carrossel.js      # Carrossel interativo de últimos casos
+    │   │   ├── contador/
+    │   │   │   └── contador.js       # Contador numérico animado para estatísticas
+    │   │   ├── footer/
+    │   │   │   ├── footer.jsx        # Rodapé institucional global
+    │   │   │   └── footer.module.css # Estilos do rodapé
+    │   │   ├── form/
+    │   │   │   └── form.js           # Formulário interativo de agendamento de consulta
+    │   │   └── header/
+    │   │       ├── header.js         # Cabeçalho global com menu mobile responsivo
+    │   │       └── header.module.css # Estilos do cabeçalho
+    │   ├── contato/
+    │   │   └── page.js               # Página de Contato (/contato)
+    │   ├── sobre/
+    │   │   └── page.js               # Página Sobre a Advogada (/sobre)
+    │   ├── styles/                   # Folhas de estilo CSS Modules das páginas principais
+    │   │   ├── contato.module.css    # Estilos da página de Contato e do Formulário
+    │   │   ├── inicio.module.css     # Estilos da Home, Contador e Carrossel
+    │   │   └── sobre.module.css      # Estilos da página Sobre
+    │   ├── global.css                # Reset CSS e configurações visuais globais
+    │   ├── layout.js                 # Layout raiz compartilhado (Fontes + Header + Footer)
+    │   └── page.js                   # Página Inicial / Home (/)
+    └── data/                         # Banco de dados simulado em arquivos JSON
+        ├── casos.json                # Base de dados dos casos jurídicos e áreas de atuação
+        └── mensagens.json            # Histórico de mensagens enviadas pelo formulário
 ```
+
+> **Fluxo de Dados da Aplicação:**
+> 1. Na **Home (`/`)**, os 4 cards de *Áreas de Atuação* apontam diretamente para `/casos_resolvidos/[slug]`, enquanto o componente `<Carrossel />` busca os 6 primeiros casos via `GET /api/casos` e também direciona cada card para `/casos_resolvidos/[slug]`.
+> 2. Ao acessar `/casos_resolvidos/[slug]`, a página captura o parâmetro da URL com `useParams()` e consulta `GET /api/casos/[slug]`, exibindo *Desafio*, *Estratégia Jurídica*, *Resultado* e *Feedback do Cliente* em abas interativas.
+> 3. Na página **`/contato`**, o componente `<Form />` envia os dados preenchidos via `POST /api/contato`, que valida e grava o novo registro em `src/data/mensagens.json`.
+
+---
+
+## ⚙️ Configuração Global da Aplicação
+
+### **1. Layout Raiz (`src/app/layout.js`)**
+Define a estrutura base compartilhada por todas as páginas da aplicação, carregando as fontes tipográficas oficiais e encapsulando as rotas entre o cabeçalho e o rodapé.
+
+```jsx
+import { Poppins, Source_Serif_4 } from "next/font/google";
+import "./global.css";
+
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+
+const poppins = Poppins({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700"],
+    variable: "--font-poppins",
+    display: "swap",
+});
+
+const sourceSerif = Source_Serif_4({
+    subsets: ["latin"],
+    weight: ["400", "600", "700"],
+    variable: "--font-source-serif",
+    display: "swap",
+});
+
+export default function RootLayout({ children }) {
+    return (
+       <html lang="pt-BR" className={`${poppins.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
+            <body suppressHydrationWarning>
+                <Header/>
+                {children}
+                <Footer/>
+            </body>
+        </html>
+    );
+}
+```
+
+**O que acontece neste código:**
+- **`next/font/google`**: Importa as fontes **Poppins** (textos corridos e formulários) e **Source_Serif_4** (títulos institucionais) de forma otimizada pelo Next.js, registrando-as como variáveis CSS (`--font-poppins` e `--font-source-serif`) na tag `<html>`.
+- **`import "./global.css"`**: Aplica o reset de margens e as cores base em toda a aplicação.
+- **Encapsulamento com `{children}`**: A propriedade `{children}` representa o conteúdo dinâmico da rota acessada (`/`, `/sobre`, `/contato` ou `/casos_resolvidos/[slug]`), garantindo que `<Header />` e `<Footer />` apareçam automaticamente em todas as telas sem repetição de código.
+- **`lang="pt-BR"` e `suppressHydrationWarning`**: Define o idioma português do Brasil para acessibilidade/SEO e evita alertas no console caso extensões do navegador modifiquem atributos HTML antes da hidratação do React.
+
+---
+
+### **2. Estilos Globais (`src/app/global.css`)**
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF2D2;
+    color: #4a241b;
+    font-family: var(--font-source-serif), serif;
+}
+```
+
+**O que acontece neste código:**
+- **Reset Universal (`*`)**: Zera margens e preenchimentos padrão dos navegadores e define `box-sizing: border-box` para que bordas e paddings não ultrapassem a largura declarada dos elementos.
+- **Identidade Base (`body`)**: Define o fundo bege institucional (`#FFF2D2`), a cor de texto padrão em marrom escuro (`#4a241b`) e a família tipográfica principal vinculada à variável `--font-source-serif`.
+
+---
+
+## 🗄️ Camada de Dados Simulados (`src/data/`)
+
+### **1. Base de Casos Jurídicos (`src/data/casos.json`)**
+Contém um array com 8 objetos completos: os 6 primeiros alimentam o Carrossel da página inicial, enquanto os registros correspondentes às áreas de atuação (`defesa-do-consumidor`, `direito-da-familia`, `direitos-trabalhistas` e `legislacao-civil`) também são acessados diretamente pelos cards da seção *Áreas de Atuação* na Home.
+
+```json
+[
+  {
+    "slug": "quebra-de-contrato",
+    "titulo": "Quebra de Contrato",
+    "texto": "Empresa com quebra de contrato sem aviso prévio. Atuação ágil para reaver valores.",
+    "img": "/img/maos2.png",
+    "desafio": "Uma empresa teve o contrato rescindido de forma unilateral, sem aviso prévio, e acumulou prejuízos com valores não pagos. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "contratos-sem-revisao",
+    "titulo": "Contratos sem Revisão",
+    "texto": "Contrato sem revisão prévia gera prejuízos financeiros e riscos ao negócio.",
+    "img": "/img/card_coffe.png",
+    "desafio": "Um negócio assinou contratos sem análise jurídica e passou a enfrentar cláusulas abusivas e riscos financeiros. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "direitos-trabalhistas",
+    "titulo": "Direitos Trabalhistas",
+    "texto": "Demitida sem justa causa e sem direitos? Buscamos a devida reparação na justiça.",
+    "img": "/img/maos.png",
+    "desafio": "Uma trabalhadora foi demitida sem justa causa e não recebeu as verbas rescisórias a que tinha direito. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "inventario-e-partilha",
+    "titulo": "Inventário e Partilha",
+    "texto": "Problemas no inventário familiar? Orientação especializada agiliza a partilha.",
+    "img": "/img/maos2.png",
+    "desafio": "Uma família enfrentava impasses e demora na partilha dos bens após o falecimento de um parente. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "defesa-do-consumidor",
+    "titulo": "Defesa do Consumidor",
+    "texto": "Consumidor lesado por propaganda enganosa tem direito à restituição e danos.",
+    "img": "/img/card_coffe.png",
+    "desafio": "Um consumidor foi induzido a erro por propaganda enganosa e sofreu prejuízo financeiro. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "cobranca-indevida",
+    "titulo": "Cobrança Indevida",
+    "texto": "Empresa sofreu cobrança indevida? Atuação estratégica para blindar o patrimônio.",
+    "img": "/img/maos.png",
+    "desafio": "Uma empresa recebeu cobranças indevidas que ameaçavam o seu patrimônio e o seu fluxo de caixa. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "direito-da-familia",
+    "titulo": "Direito da Família",
+    "texto": "Questões familiares exigem sensibilidade e segurança jurídica na solução.",
+    "img": "/img/maos2.png",
+    "desafio": "Um conflito familiar envolvendo guarda e pensão exigia uma solução equilibrada e respeitosa. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  },
+  {
+    "slug": "legislacao-civil",
+    "titulo": "Legislação Civil",
+    "texto": "Orientação clara sobre direitos e deveres nas relações civis do dia a dia.",
+    "img": "/img/card_coffe.png",
+    "desafio": "Um cliente tinha dúvidas sobre seus direitos em uma relação civil e precisava de orientação segura. (Edite este texto com o caso real.)",
+    "estrategia": [
+      {
+        "titulo": "Análise",
+        "descricao": "Análise detalhada da documentação e dos pontos principais do caso."
+      },
+      {
+        "titulo": "Planejamento",
+        "descricao": "Definição das medidas jurídicas mais adequadas ao objetivo do cliente."
+      },
+      {
+        "titulo": "Atuação",
+        "descricao": "Condução do caso com foco na solução mais rápida e segura."
+      }
+    ],
+    "resultado": "Resultado alcançado com a atuação jurídica. (Edite este texto com o resultado real.)",
+    "impactos": [
+      {
+        "titulo": "Segurança",
+        "descricao": "Solução dos pontos de risco identificados."
+      },
+      {
+        "titulo": "Resolução",
+        "descricao": "Medidas adotadas para atender aos objetivos do cliente."
+      }
+    ],
+    "feedback": "Espaço destinado ao depoimento do cliente após a conclusão do caso."
+  }
+]
+```
+
+**O que acontece neste código:**
+- **Chave Única (`slug`)**: Identificador amigável para URL (ex.: `"quebra-de-contrato"`), usado tanto para construir links dinâmicos (`<Link href={`/casos_resolvidos/${caso.slug}`}>`) quanto para filtrar o caso na API.
+- **Dados Resumidos vs. Detalhados**: Os campos `titulo`, `texto` e `img` alimentam os cards do Carrossel, enquanto `desafio`, `estrategia` (lista), `resultado`, `impactos` (lista) e `feedback` abastecem as abas internas da página de detalhes.
+
+---
+
+### **2. Registro de Mensagens Recebidas (`src/data/mensagens.json`)**
+
+```json
+[
+  {
+    "id": 1795486623866,
+    "nome": "aaa",
+    "email": "gabyynog2211@gmail.com",
+    "telefone": "11951582537",
+    "data": "0455-11-22",
+    "mensagem": "aaaaaa",
+    "criadoEm": "2026-11-24T02:17:03.866Z"
+  }
+]
+```
+
+**O que acontece neste código:**
+- **Persistência em Disco**: Armazena um array JSON com os envios realizados pelo formulário da página de Contato.
+- **Metadados Automáticos**: Além dos campos enviados pelo formulário (`nome`, `email`, `telefone`, `data`, `mensagem`), o back-end gera automaticamente um `id` numérico único e o carimbo de data/hora `criadoEm` no padrão ISO-8601.
+
+---
+
+## 🌐 Camada de Backend Interno — API Routes (`src/app/api/`)
+
+### **1. Listagem Geral de Casos (`src/app/api/casos/route.js`)**
+Rota `GET` que devolve todos os casos cadastrados em `casos.json`.
+
+```javascript
+import { NextResponse } from "next/server";
+import casos from "@/data/casos.json";
+
+export async function GET() {
+    return NextResponse.json(casos);
+}
+```
+
+**O que acontece neste código:**
+- **`NextResponse.json(casos)`**: Responde às requisições `GET` feitas em `/api/casos`, retornando o conteúdo completo de `src/data/casos.json` serializado em JSON com status `200 OK`.
+- **Alias `@/`**: Atalho configurado no projeto que aponta diretamente para a pasta `src/`.
+
+---
+
+### **2. Busca Dinâmica de Caso por Slug (`src/app/api/casos/[slug]/route.js`)**
+Rota dinâmica `GET` que captura o `slug` pela URL e retorna apenas os dados daquele caso específico.
+
+```javascript
+import { NextResponse } from "next/server";
+import casos from "@/data/casos.json";
+
+export async function GET(request, { params }) {
+    const { slug } = await params; // no Next 16 params é uma Promise
+
+    const caso = casos.find((c) => c.slug === slug);
+
+    if (!caso) {
+        return NextResponse.json(
+            { erro: "Caso não encontrado" },
+            { status: 404 }
+        );
+    }
+
+    return NextResponse.json(caso);
+}
+```
+
+**O que acontece neste código:**
+- **Pasta `[slug]`**: Os colchetes indicam ao Next.js que este trecho da URL é dinâmico (ex.: `/api/casos/quebra-de-contrato`).
+- **`const { slug } = await params`**: Nas versões recentes do Next.js (Next 15/16), `params` é assíncrono (`Promise`), exigindo `await` para extrair o parâmetro `slug`.
+- **Busca e Tratamento de Erro (`404`)**: Usa `casos.find()` para localizar o objeto correspondente; caso o `slug` não exista, retorna erro com status HTTP `404` (*Not Found*).
+
+---
+
+### **3. Recebimento e Persistência de Contatos (`src/app/api/contato/route.js`)**
+Endpoint `POST` que valida os dados do formulário e grava o novo agendamento no arquivo `mensagens.json`.
+
+```javascript
+import { NextResponse } from "next/server";
+import { promises as fs } from "fs";
+import path from "path";
+
+const arquivo = path.join(process.cwd(), "src", "data", "mensagens.json");
+
+export async function POST(request) {
+    const { nome, email, telefone, data, mensagem } = await request.json();
+
+    if (!nome || !email) {
+        return NextResponse.json(
+            { erro: "Nome e e-mail são obrigatórios" },
+            { status: 400 }
+        );
+    }
+
+    const conteudo = await fs.readFile(arquivo, "utf-8");
+    const mensagens = JSON.parse(conteudo);
+
+    mensagens.push({
+        id: Date.now(),
+        nome,
+        email,
+        telefone,
+        data,
+        mensagem,
+        criadoEm: new Date().toISOString(),
+    });
+
+    await fs.writeFile(arquivo, JSON.stringify(mensagens, null, 2));
+
+    return NextResponse.json({ ok: true }, { status: 201 });
+}
+```
+
+**O que acontece neste código:**
+- **Módulos Nativos `fs` e `path`**: Localiza o caminho absoluto de `src/data/mensagens.json` a partir da raiz do projeto (`process.cwd()`) para ler e gravar arquivos no servidor Node.js.
+- **Validação de Entrada (`status: 400`)**: Extrai o corpo JSON (`await request.json()`) e verifica se `nome` e `email` foram preenchidos; se estiverem vazios, retorna erro `400` (*Bad Request*).
+- **Leitura, Inserção e Escrita**: Lê o array atual (`fs.readFile`), converte via `JSON.parse`, insere o novo registro com `id: Date.now()` e `criadoEm: new Date().toISOString()`, e salva o arquivo formatado (`JSON.stringify(..., null, 2)`), devolvendo status `201` (*Created*).
+
+---
+
+## 🧩 Componentização (`src/app/components/`)
+
+### **1. Componente Header (`src/app/components/header/header.js` e `header.module.css`)**
+Gerencia o cabeçalho global da aplicação, os links de navegação e a abertura/fechamento do menu responsivo em dispositivos móveis via `useState`.
+
+```jsx
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import styles from "./header.module.css";
 
 export default function Header() {
-    const [menuAberto, setMenuAberto] = useState(false);
+    const [aberto, setAberto] = useState(false);
 
     return (
         <header className={styles.header}>
-            <nav className={styles.menu}>
-                <Link href="/" className={styles.logo}>
-                    <img src="/img/logo.png" alt="Logo do escritório" />
-                </Link>
+            <div className={styles.menu}>
+                <a href="/" className={styles.logo}>
+                    <img src="/img/logo.png" alt="Logo" />
+                </a>
 
-                <ul className={`${styles.nav_links} ${menuAberto ? styles.ativo : ""}`}>
-                    <li>
-                        <Link href="/" onClick={() => setMenuAberto(false)}>
-                            Início
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link href="/sobre" onClick={() => setMenuAberto(false)}>
-                            Sobre
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link href="/contato" onClick={() => setMenuAberto(false)}>
-                            Contato
-                        </Link>
-                    </li>
+                <ul className={`${styles.nav_links} ${aberto ? styles.ativo : ""}`}>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
                 </ul>
 
-                <Link href="/contato" className={styles.botao_consulta}>
-                    Agende uma consulta
-                </Link>
+                <a href="/contato" className={styles.botao_consulta}>
+                    Consulta
+                </a>
 
                 <button
+                    type="button"
                     className={styles.menu_hamburguer}
-                    onClick={() => setMenuAberto(!menuAberto)}
+                    onClick={() => setAberto(!aberto)}
                     aria-label="Abrir menu"
                 >
-                    ☰
+                    {aberto ? "✕" : "☰"}
                 </button>
-            </nav>
+            </div>
         </header>
     );
 }
 ```
 
-### **2. Componente Footer (footer.jsx)**
-Rodapé estruturado contendo links institucionais, dados de contato e redes sociais.
+**Estilização (`src/app/components/header/header.module.css`):**
 
+```css
+.header {
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.menu {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 95px;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 175px;
+    height: auto;
+}
+
+.nav_links {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    margin-right: 50px;
+}
+
+.nav_links a {
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.nav_links a:hover {
+    color: #6F1D1B;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.botao_consulta {
+    background-color: #6F1D1B;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu_hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: #6F1D1B;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header {
+        z-index: 1000;
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .menu_hamburguer {
+        display: block;
+        position: relative;
+        z-index: 100000;
+        border: none;
+        background: transparent;
+        color: #6F1D1B;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .botao_consulta {
+        display: none;
+    }
+
+    .nav_links {
+        display: none;
+    }
+
+    .nav_links.ativo {
+        display: flex;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 10px 0;
+        background-color: #ffffff;
+        list-style: none;
+        z-index: 99999;
+    }
+
+    .nav_links.ativo li {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .nav_links.ativo li a {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+        color: #333333;
+        text-decoration: none;
+        font-size: 17px;
+    }
+}
 ```
+
+**O que acontece neste código:**
+- **`"use client"` e `useState(false)`**: Habilita a interatividade no navegador e cria o estado booleano `aberto` que controla o menu mobile.
+- **Classe Condicional (`.ativo`)**: Adiciona `styles.ativo` à lista `<ul>` quando `aberto` é verdadeiro, exibindo o menu suspenso em coluna (`top: 65px`) abaixo de `768px`.
+- **Alternância de Ícone (`{aberto ? "✕" : "☰"}`)**: Altera visualmente o símbolo do botão hambúrguer conforme o estado atual do menu.
+
+---
+
+### **2. Componente Footer (`src/app/components/footer/footer.jsx` e `footer.module.css`)**
+Rodapé institucional global contendo logotipo, links rápidos, dados de contato e redes sociais.
+
+```jsx
 import Link from "next/link";
 import styles from "./footer.module.css";
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
+
             <section className={styles.container_footer}>
+
                 <article className={`${styles.footer_info} ${styles.footer_logo}`}>
                     <h2>
                         <Link href="/">
                             <img src="/img/logo.png" alt="Logo" />
                         </Link>
                     </h2>
+
                     <p>
                         Advocacia com propósito: proteger direitos, construir confiança.
                     </p>
@@ -169,6 +801,7 @@ export default function Footer() {
 
                 <nav className={`${styles.footer_info} ${styles.footer_navegacao}`}>
                     <h2>Navegação</h2>
+
                     <ul>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="/sobre">Sobre</Link></li>
@@ -179,14 +812,17 @@ export default function Footer() {
 
                 <address className={`${styles.footer_info} ${styles.footer_contato}`}>
                     <h2>Contato</h2>
+
                     <div className={styles.contato_item}>
                         <img src="/img/Vector (2).png" alt="Telefone" />
                         <p>(11) 9999-9999</p>
                     </div>
+
                     <div className={styles.contato_item}>
                         <img src="/img/Vector (3).png" alt="E-mail" />
                         <p>contato@exemplo.com</p>
                     </div>
+
                     <div className={styles.contato_item}>
                         <img src="/img/Vector (4).png" alt="Localização" />
                         <p>São Paulo, SP</p>
@@ -195,81 +831,222 @@ export default function Footer() {
 
                 <article className={`${styles.footer_info} ${styles.footer_atendimento}`}>
                     <h2>Atendimento</h2>
+
                     <p>
                         Atendimento online e presencial, agende sua consulta.
                     </p>
-                    <Link href="#" className={styles.btn_maroon}>
+
+                    <Link className="{styles.btn_maroon}" href="#">
                         Consulta
                     </Link>
                 </article>
+
             </section>
 
             <nav className={styles.social_links} aria-label="Redes sociais">
                 <a href="#">
                     <img src="/img/Facebook.png" alt="Facebook" />
                 </a>
+
                 <a href="#">
                     <img src="/img/Instagram (6).png" alt="Instagram" />
                 </a>
+
                 <a href="#">
                     <img src="/img/Linkedin (2).png" alt="LinkedIn" />
                 </a>
             </nav>
+
         </footer>
     );
 }
 ```
 
-### **3. Componente Carrossel (carrossel.js)**
-Componente reativo para estatísticas numéricas animadas.
+**Estilização (`src/app/components/footer/footer.module.css`):**
 
+```css
+.footer {
+    background-color: white;
+    color: #6F1D1B;
+    padding: 50px 7% 25px;
+}
+
+.container_footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.3fr 1.3fr;
+    gap: 50px;
+}
+
+.footer_info h2 {
+    font-family: 'Source Serif 4', serif;
+    color: #6F1D1B;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.footer_info p {
+    color: #432818;
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_logo img {
+    width: 175px;
+    height: auto;
+}
+
+.footer_logo h2 {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_logo p {
+    max-width: 220px;
+}
+
+.footer_navegacao ul {
+    list-style: none;
+}
+
+.footer_navegacao li {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer_navegacao a {
+    color: #6F1D1B;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer_navegacao a:hover {
+    color: #c59a45;
+}
+
+.footer_contato {
+    font-style: normal;
+}
+
+.contato_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 13px;
+}
+
+.contato_item img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.contato_item p {
+    margin: 0;
+}
+
+.footer_atendimento p {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+
+.btn_maroon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6F1D1B;
+    color: #FFF2D2;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn_maroon:hover {
+    background-color: #641818;
+}
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(48, 47, 47, 0.3);
+}
+
+.social_links a {
+    display: flex;
+    align-items: center;
+}
+
+.social_links a:hover {
+    opacity: 0.7;
+}
+
+.social_links img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 25px 25px;
+    }
+
+    .container_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_logo p {
+        max-width: 100%;
+    }
+
+    .footer_atendimento p {
+        max-width: 100%;
+    }
+
+    .social_links {
+        margin-top: 20px;
+    }
+}
 ```
+
+**O que acontece neste código:**
+- **Server Component Nativo**: Renderizado diretamente no servidor por não exigir estado no cliente.
+- **HTML5 Semântico e Grid Responsivo**: Usa `<footer>`, `<nav>`, `<address>` e `<article>`, organizando o conteúdo em 4 colunas (`grid-template-columns: 1.5fr 1fr 1.3fr 1.3fr`) no desktop e empilhando em coluna única abaixo de `768px`.
+
+---
+
+### **3. Componente Carrossel Dinâmico (`src/app/components/carrossel/carrossel.js`)**
+Busca os casos diretamente da API interna (`/api/casos`), agrupa-os em slides e redireciona cada card para sua rota dinâmica.
+
+```jsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import styles from "../../styles/inicio.module.css";
-
-const casos = [
-    {
-        titulo: "Quebra de Contrato",
-        texto: "Empresa com quebra de contrato sem aviso prévio. Atuação ágil para reaver valores.",
-        img: "/img/Devino antreprenor, impreuna este simplu! 1.png",
-    },
-    {
-        titulo: "Contratos sem Revisão",
-        texto: "Contrato sem revisão prévia gera prejuízos financeiros e riscos ao negócio.",
-        img: "/img/Command Your Contracts, Command Your Future 1.png",
-    },
-    {
-        titulo: "Direitos Trabalhistas",
-        texto: "Demitida sem justa causa e sem direitos? Buscamos a devida reparação na justiça.",
-        img: "/img/transferir (6) 1.png",
-    },
-    {
-        titulo: "Inventário e Partilha",
-        texto: "Problemas no inventário familiar? Orientação especializada agiliza a partilha.",
-        img: "/img/Devino antreprenor, impreuna este simplu! 1.png",
-    },
-    {
-        titulo: "Defesa do Consumidor",
-        texto: "Consumidor lesado por propaganda enganosa tem direito à restituição e danos.",
-        img: "/img/Command Your Contracts, Command Your Future 1.png",
-    },
-    {
-        titulo: "Cobrança Indevida",
-        texto: "Empresa sofreu cobrança indevida? Atuação estratégica para blindar o patrimônio.",
-        img: "/img/transferir (6) 1.png",
-    },
-];
-
-const grupos = [];
-for (let i = 0; i < casos.length; i += 3) {
-    grupos.push(casos.slice(i, i + 3));
-}
 
 export default function Carrossel() {
     const grupoRef = useRef(null);
     const [indice, setIndice] = useState(0);
+    const [casos, setCasos] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/casos")
+            .then((res) => res.json())
+            .then((dados) => setCasos(dados.slice(0, 6)));
+    }, []);
+
+    const grupos = [];
+    for (let i = 0; i < casos.length; i += 3) {
+        grupos.push(casos.slice(i, i + 3));
+    }
 
     function atualizar(novoIndice) {
         const grupo = grupoRef.current;
@@ -278,6 +1055,7 @@ export default function Carrossel() {
         if (window.innerWidth <= 768) {
             const card = grupo.querySelector("[data-card]");
             const larguraCard = card ? card.offsetWidth : 0;
+
             grupo.style.transform = `translateX(-${novoIndice * larguraCard}px)`;
         } else {
             grupo.style.transform = `translateX(-${novoIndice * 100}%)`;
@@ -286,54 +1064,70 @@ export default function Carrossel() {
 
     useEffect(() => {
         atualizar(indice);
-    }, [indice]);
+    }, [indice, casos]);
 
     useEffect(() => {
         function aoRedimensionar() {
             setIndice(0);
             atualizar(0);
         }
+
         window.addEventListener("resize", aoRedimensionar);
+
         return () => window.removeEventListener("resize", aoRedimensionar);
     }, []);
 
     function proximo() {
         const limite =
             window.innerWidth <= 768 ? casos.length - 1 : grupos.length - 1;
-        setIndice((atual) => (atual < limite ? atual + 1 : atual));
+
+        setIndice((atual) =>
+            atual < limite ? atual + 1 : atual
+        );
     }
 
     function anterior() {
-        setIndice((atual) => (atual > 0 ? atual - 1 : atual));
+        setIndice((atual) =>
+            atual > 0 ? atual - 1 : atual
+        );
     }
 
     return (
         <div className={styles["carrossel-area"]}>
             <div className={styles["carrossel-container"]}>
-                <div className={styles["carrossel-grupo"]} ref={grupoRef}>
+                <div
+                    className={styles["carrossel-grupo"]}
+                    ref={grupoRef}
+                >
                     {grupos.map((grupo, i) => (
-                        <div className={styles["grupo-cards"]} key={i}>
+                        <div
+                            className={styles["grupo-cards"]}
+                            key={i}
+                        >
                             {grupo.map((caso) => (
                                 <article
                                     className={styles.caso_card}
                                     data-card
-                                    key={caso.titulo}
+                                    key={caso.slug}
                                 >
                                     <img
                                         className={styles.caso_img}
                                         src={caso.img}
-                                        alt="Caso"
+                                        alt={caso.titulo}
                                     />
+
                                     <div className={styles.caso_conteudo}>
                                         <h3 className={styles.caso_titulo}>
                                             {caso.titulo}
                                         </h3>
+
                                         <p className={styles.caso_texto}>
                                             {caso.texto}
                                         </p>
-                                        <a href="#" className={styles.card_link}>
+
+                                        <Link className="{styles.card_link}" href="{`/casos_resolvidos/${caso.slug}`}">
                                             Saiba mais
-                                        </a>
+                                        </Link>
                                     </div>
                                 </article>
                             ))}
@@ -351,6 +1145,7 @@ export default function Carrossel() {
                 >
                     &lt;
                 </button>
+
                 <button
                     className={styles["botao-redondo"]}
                     type="button"
@@ -363,17 +1158,23 @@ export default function Carrossel() {
         </div>
     );
 }
-
 ```
 
-### **4. Componente Contador (contador.js)**
-Componente reativo para estatísticas numéricas animadas.
+**O que acontece neste código:**
+- **Consumo da API (`/api/casos`)**: No carregamento inicial (`useEffect`), busca os casos e armazena os 6 primeiros (`dados.slice(0, 6)`).
+- **Agrupamento e Deslizamento (`useRef` + `translateX`)**: Divide os casos em grupos de 3 cards no desktop e manipula `transform: translateX(...)` na referência `grupoRef` para deslizar suavemente por grupo (`100%`) no desktop ou por largura individual de card (`offsetWidth`) no mobile.
+- **Redimensionamento (`resize`) e Links Dinâmicos**: Reseta o índice para `0` ao redimensionar a janela e direciona cada botão *"Saiba mais"* para `/casos_resolvidos/${caso.slug}`.
 
-```
+---
+
+### **4. Componente Contador Animado (`src/app/components/contador/contador.js`)**
+Componente reativo para estatísticas numéricas animadas na página inicial.
+
+```jsx
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "../../styles/inicio.module.css";
+import styles from "../../styles/inicio.module.css"
 
 export default function Contador({ valorFinal }) {
     const [contador, setContador] = useState(0);
@@ -393,26 +1194,117 @@ export default function Contador({ valorFinal }) {
         return () => clearInterval(intervalo);
     }, [valorFinal]);
 
-    return <span className={styles.numero_estatistica}>{contador}+</span>;
+ 
+       return <span className={styles.numero_estatistica}>{contador}+</span>;
 }
 ```
 
+**O que acontece neste código:**
+- **Prop `valorFinal` e `setInterval`**: Recebe o valor alvo (`5`, `50` ou `15`) e incrementa `contador` de `1` em `1` a cada `100ms` até atingir `valorFinal`, encerrando e limpando o intervalo com `clearInterval`.
+
 ---
 
-##  Estrutura das Páginas e Implementação
-Utilizamos a organização de rotas no Next.js, onde a página inicial se localiza diretamente na raiz (page.js) e as demais páginas estruturais (/sobre e /contato) utilizam pastas próprias, além da pasta de estilização (/styles) onde se localizam os arquivos de estilo personalizados via CSS Modules.
+### **5. Componente Formulário de Contato (`src/app/components/form/form.js`)**
+Gerencia a captura de dados, o envio assíncrono via `POST` e o retorno visual ao usuário.
 
-### 1. Página Inicial / Home (/)
-- Arquivo: src/app/page.js
-- Estilização: src/app/styles/inicio.module.css
-- É a principal porta de entrada institucional do portfólio. A sua estrutura compõe:
--- Um banner principal (hero) de alto impacto visual destacando o compromisso jurídico.
--- Uma barra de estatísticas dinâmica e reativa que utiliza o componente Contador (com animações incrementais via hooks) para exibir anos de carreira, clientes atendidos e casos resolvidos.
--- Uma grelha com as principais Áreas de Atuação do escritório (Defesa do Consumidor, Direito da Família, Direitos Trabalhistas e Legislação Civil).
--- Uma secção institucional sobre a advogada com checklist de diferenciais e um Carrossel interativo de últimos casos de sucesso.
+```jsx
+'use client';
 
+import { useState } from 'react';
+import styles from '../../styles/contato.module.css';
+
+export default function Form() {
+    const [status, setStatus] = useState('');
+
+    async function enviar(e) {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const dados = Object.fromEntries(new FormData(form));
+
+        setStatus('Enviando...');
+
+        try {
+            const res = await fetch('/api/contato', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados),
+            });
+
+            if (res.ok) {
+                setStatus('Mensagem enviada com sucesso!');
+                form.reset();
+            } else {
+                setStatus('Erro ao enviar. Tente novamente.');
+            }
+        } catch {
+            setStatus('Erro de conexão. Tente novamente.');
+        }
+    }
+
+    return (
+        <div className={styles.formulario}>
+            <h2>Agende uma consulta</h2>
+
+            <form onSubmit={enviar}>
+                <div className={styles.campo}>
+                    <i className="fa-regular fa-user"></i>
+                    <input type="text" name="nome" placeholder="Nome" required />
+                </div>
+
+                <div className={styles.campo}>
+                    <i className="fa-regular fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+
+                <div className={styles.campo}>
+                    <i className="fa-solid fa-phone"></i>
+                    <input type="tel" name="telefone" placeholder="Telefone" />
+                </div>
+
+                <div className={styles.campo}>
+                    <i className="fa-regular fa-calendar"></i>
+                    <input type="date" name="data" />
+                </div>
+
+                <div className={`${styles.campo} ${styles.mensagem}`}>
+                    <i className="fa-regular fa-comment"></i>
+                    <textarea name="mensagem" placeholder="Mensagem"></textarea>
+                </div>
+
+                <div className={styles.area_botao}>
+                    <button type="submit">
+                        Enviar
+                    </button>
+                </div>
+
+                {status && <p>{status}</p>}
+            </form>
+        </div>
+    );
+}
 ```
+
+**O que acontece neste código:**
+- **Extração com `FormData`**: Intercepta o submit (`e.preventDefault()`) e converte todos os inputs do formulário em um objeto JavaScript via `Object.fromEntries(new FormData(form))`.
+- **Envio `POST` e Feedback (`status`)**: Envia o JSON para `/api/contato`, atualiza a mensagem de status em tempo real (`"Enviando..."`, `"Mensagem enviada com sucesso!"` ou mensagens de erro) e limpa o formulário (`form.reset()`).
+
+---
+
+## 📄 Estrutura das Páginas e Implementação
+
+### **1. Página Inicial / Home (`/`)**
+- **Arquivo**: `src/app/page.js`
+- **Estilização**: `src/app/styles/inicio.module.css`
+- **Estrutura**:
+  - Banner principal (*hero*) com sobreposição da estátua da Justiça.
+  - Barra de estatísticas animadas utilizando `<Contador />`.
+  - Grade com as 4 **Áreas de Atuação**, cada uma apontando diretamente para sua respectiva rota dinâmica `/casos_resolvidos/[slug]`.
+  - Seção institucional sobre a advogada com checklist de diferenciais e o `<Carrossel />` interativo de últimos casos.
+
+```jsx
 import styles from "./styles/inicio.module.css";
+import Link from "next/link";
+
 import Contador from "./components/contador/contador";
 import Carrossel from "./components/carrossel/carrossel";
 
@@ -436,12 +1328,9 @@ export default function Home() {
                             cliente.
                         </p>
 
-                        <a
-                            href="/contato"
-                            className={`${styles.botao_contato} ${styles.botao_contato_principal}`}
-                        >
+                        <Link ${styles.botao_contato_principal}`} className="{`${styles.botao_contato}" href="/contato">
                             Contato
-                        </a>
+                        </Link>
                     </div>
 
                     <div className={styles.container_hero_imagens}>
@@ -469,7 +1358,7 @@ export default function Home() {
                             className={styles.imagem_icone_estatistica}
                         />
                         <p>
-                            <Contador valorFinal={5} />
+                            <Contador valorFinal="{5}"/>
                             <span className={styles.rotulo_estatistica}>
                                 Anos de Carreira
                             </span>
@@ -485,7 +1374,7 @@ export default function Home() {
                             className={styles.imagem_icone_estatistica}
                         />
                         <p>
-                            <Contador valorFinal={50} />
+                            <Contador valorFinal="{50}"/>
                             <span className={styles.rotulo_estatistica}>
                                 Clientes Atendidos
                             </span>
@@ -501,7 +1390,7 @@ export default function Home() {
                             className={styles.imagem_icone_estatistica}
                         />
                         <p>
-                            <Contador valorFinal={15} />
+                            <Contador valorFinal="{15}"/>
                             <span className={styles.rotulo_estatistica}>
                                 Casos Resolvidos
                             </span>
@@ -512,7 +1401,9 @@ export default function Home() {
 
             <section className={styles.areas_atuacao}>
                 <article className={styles.container_areas}>
-                    <h1 className={styles.titulo_areas}>Áreas de Atuação</h1>
+                    <h1 className={styles.titulo_areas}>
+                        Áreas de Atuação
+                    </h1>
 
                     <div className={styles.linha}></div>
 
@@ -523,15 +1414,18 @@ export default function Home() {
                                 alt="Ícone Defesa do Consumidor"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Defesa do Consumidor
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos nas relações de consumo.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link className="{styles.link_cartao}" href="/casos_resolvidos/defesa-do-consumidor">
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
 
                         <article className={styles.cartao}>
@@ -540,15 +1434,18 @@ export default function Home() {
                                 alt="Ícone Direito da Família"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Direito da Família
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos nas relações de família.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link className="{styles.link_cartao}" href="/casos_resolvidos/direito-da-familia">
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
 
                         <article className={styles.cartao}>
@@ -557,15 +1454,18 @@ export default function Home() {
                                 alt="Ícone Direitos Trabalhistas"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Direitos Trabalhistas
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos nas relações trabalhistas.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link className="{styles.link_cartao}" href="/casos_resolvidos/direitos-trabalhistas">
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
 
                         <article className={styles.cartao}>
@@ -574,15 +1474,18 @@ export default function Home() {
                                 alt="Ícone Legislação Civil"
                                 className={styles.icone_cartao}
                             />
+
                             <h2 className={styles.titulo_cartao}>
                                 Legislação Civil
                             </h2>
+
                             <p className={styles.descricao_cartao}>
                                 Defesa dos seus direitos na área civil.
                             </p>
-                            <a href="#" className={styles.link_cartao}>
+
+                            <Link className="{styles.link_cartao}" href="/casos_resolvidos/legislacao-civil">
                                 Saiba mais
-                            </a>
+                            </Link>
                         </article>
                     </div>
                 </article>
@@ -590,11 +1493,16 @@ export default function Home() {
 
             <section className={styles.sobre}>
                 <figure className={styles.img_advogada}>
-                    <img src="/img/advogada.jpeg" alt="Foto da advogada" />
+                    <img
+                        src="/img/advogada.jpeg"
+                        alt="Foto da advogada"
+                    />
                 </figure>
 
                 <article className={styles.sobre_texto}>
-                    <h2 className={styles.sobre_titulo}>Sobre a Doutora</h2>
+                    <h2 className={styles.sobre_titulo}>
+                        Sobre a Doutora
+                    </h2>
 
                     <div className={styles.linha}></div>
 
@@ -609,32 +1517,33 @@ export default function Home() {
                             <img src="/img/Check.png" alt="" />
                             Atendimento humanizado;
                         </li>
+
                         <li>
                             <img src="/img/Check.png" alt="" />
                             Compromisso com o cliente;
                         </li>
+
                         <li>
                             <img src="/img/Check.png" alt="" />
                             Transparência e ética profissional.
                         </li>
                     </ul>
 
-                    <a
-                        href="/contato"
-                        className={`${styles.botao_contato} ${styles.botao_contato_sobre}`}
-                    >
+                    <Link ${styles.botao_contato_sobre}`} className="{`${styles.botao_contato}" href="/contato">
                         Contato
-                    </a>
+                    </Link>
                 </article>
             </section>
 
             <section className={styles.noticias}>
                 <div className={styles.container_noticias}>
-                    <h2 className={styles.noticias_titulo}>Últimos Casos</h2>
+                    <h2 className={styles.noticias_titulo}>
+                        Últimos Casos
+                    </h2>
 
                     <div className={styles.linha}></div>
 
-                    <Carrossel />
+                    <Carrossel/>
                 </div>
             </section>
         </main>
@@ -642,13 +1551,637 @@ export default function Home() {
 }
 ```
 
-### 2. Página Sobre (/sobre)
-- Arquivo: src/app/sobre/page.js
-- Estilização: src/app/styles/sobre.module.css
-- Desenvolvida para consolidar a presença digital, credibilidade e a vertente extensionista da profissional. Apresenta detalhadamente a trajetória da advogada, os seus valores éticos, o compromisso social em democratizar o acesso à informação jurídica e cards informativos com as especialidades jurídicas oferecidas à comunidade.
+**Estilização (`src/app/styles/inicio.module.css`):**
 
+```css
+.principal {
+    background-color: #FFF2D2;
+    position: relative;
+    z-index: 20;
+}
+
+.container_principal {
+    height: 423px;
+    display: flex;
+    position: relative;
+}
+
+.principal_texto {
+    width: 55%;
+    padding: 58px 30px 40px 67px;
+}
+
+.titulo_principal {
+    max-width: 480px;
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 42px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.titulo_principal span {
+    color: #6F1D1B;
+}
+
+.descricao {
+    max-width: 390px;
+    margin-top: 16px;
+    color: #190900;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+.botao_contato {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-weight: bold;
+}
+
+.botao_contato_principal {
+    margin-top: 42px;
+    padding: 10px 20px;
+    background-color: #6F1D1B;
+    color: #FFF2D2;
+}
+
+.botao_contato_principal::after {
+    content: " →";
+    font-size: 18px;
+}
+
+.container_hero_imagens {
+    width: 45%;
+    height: 423px;
+    position: relative;
+}
+
+.img_fundo_card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.img_estatua_sobreposta {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    height: 434px;
+    width: auto;
+    object-fit: contain;
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.barra_estatisticas {
+    background-color: #6F1D1B;
+}
+
+.grade_estatisticas {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    list-style: none;
+    align-items: center;
+}
+
+.item_estatistica {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.separador {
+    width: 2px;
+    height: 60px;
+    background-color: #BB9457;
+}
+
+.imagem_icone_estatistica {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.item_estatistica p {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.numero_estatistica {
+    color: #FFF2D2;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.rotulo_estatistica {
+    color: #FFF2D2;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.areas_atuacao {
+    background-color: #FFF2D2;
+    padding: 40px 120px 50px;
+}
+
+.container_areas {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.titulo_areas {
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 28px;
+}
+
+.linha {
+    width: 55px;
+    height: 2px;
+    background-color: #BB9457;
+    margin: 10px 0 30px;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cartao {
+    width: 250px;
+    height: 310px;
+    background-color: #FDF5E5;
+    border: 1px solid #6F1D1B54;
+    border-radius: 4px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(74, 36, 27, 0.12);
+}
+
+.icone_cartao {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 25px;
+}
+
+.titulo_cartao {
+    width: 150px;
+    color: #6F1D1B;
+    font-family: 'Source Serif 4', serif;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.descricao_cartao {
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card_link,
+.link_cartao {
+    margin-top: auto;
+    color: #6F1D1B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card_link::after,
+.link_cartao::after {
+    content: " →";
+}
+
+.card_link:hover,
+.link_cartao:hover {
+    color: #432818;
+}
+
+.sobre {
+    background-color: #6F1D1B;
+    padding: 60px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.img_advogada {
+    width: 400px;
+    height: 400px;
+    background-color: #d3d3d3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.img_advogada::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 40px solid #BB9457;
+    border-left: 40px solid transparent;
+}
+
+.img_advogada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre_texto {
+    width: 500px;
+}
+
+.sobre_titulo {
+    color: #FFF2D2;
+    font-family: 'Source Serif 4', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.sobre_descricao {
+    color: #FFF2D2;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+.check_list {
+    list-style: none;
+    margin: 0 0 30px;
+}
+
+.check_list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.check_list li img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.botao_contato_sobre {
+    padding: 13px 30px;
+    background-color: #FFF2D2;
+    color: #7d1f1f;
+    font-size: 15px;
+}
+
+.botao_contato_sobre:hover {
+    background-color: #BB9457;
+}
+
+.noticias {
+    background-color: #FFF2D2;
+    padding: 60px 0 75px;
+}
+
+.container_noticias {
+    width: 1075px;
+    margin: 0 auto;
+}
+
+.noticias_titulo {
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.carrossel-area {
+    position: relative;
+    width: 100%;
+}
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrossel-grupo {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
+}
+
+.grupo-cards {
+    display: flex;
+    gap: 25px;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.caso_card {
+    background-color: #ffffff;
+    width: calc(33.333% - 17px);
+    min-height: 230px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.caso_card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 25px solid #6F1D1B;
+    border-left: 25px solid transparent;
+}
+
+.caso_img {
+    width: 40%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.caso_conteudo {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caso_titulo {
+    color: #6F1D1B;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.caso_texto {
+    color: #190900;
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botao-redondo {
+    background-color: #6F1D1B;
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.botao-redondo:hover {
+    background-color: #432818;
+}
+
+
+@media (max-width: 768px) {
+    .container_principal {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .principal_texto {
+        width: 100%;
+        padding: 40px 25px;
+    }
+
+    .titulo_principal {
+        max-width: 100%;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .descricao {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .botao_contato_principal {
+        margin-top: 25px;
+    }
+
+    .container_hero_imagens {
+        width: 100%;
+        height: 300px;
+    }
+
+    .img_fundo_card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img_estatua_sobreposta {
+        height: 300px;
+        left: 10%;
+        top: 0;
+    }
+
+    .barra_estatisticas {
+        padding: 20px 10px;
+    }
+
+    .grade_estatisticas {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .item_estatistica {
+        width: 100%;
+    }
+
+    .separador {
+        width: 60%;
+        height: 1px;
+    }
+
+    .areas_atuacao {
+        padding: 40px 20px;
+    }
+
+    .container_areas {
+        width: 100%;
+    }
+
+    .titulo_areas {
+        font-size: 28px;
+    }
+
+    .container_cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartao {
+        width: 75%;
+        max-width: 260px;
+        height: 310px;
+    }
+
+    .sobre {
+        padding: 45px 20px;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .img_advogada {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+    }
+
+    .sobre_texto {
+        width: 100%;
+    }
+
+    .sobre_titulo {
+        font-size: 28px;
+    }
+
+    .sobre_descricao {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .check_list li {
+        font-size: 15px;
+    }
+
+    .noticias {
+        padding: 40px 20px 50px;
+    }
+
+    .container_noticias {
+        width: 100%;
+    }
+
+    .noticias_titulo {
+        font-size: 26px;
+    }
+
+    .carrossel-area {
+        width: 100%;
+    }
+
+    .carrossel-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .carrossel-grupo {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .grupo-cards {
+        display: contents;
+    }
+
+    .caso_card {
+        min-width: 100%;
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .caso_img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .caso_conteudo {
+        width: 100%;
+        min-height: 190px;
+        padding: 20px 22px 22px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caso_titulo {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    .caso_texto {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .card_link {
+        margin-top: 15px;
+    }
+
+    .controles {
+        margin-top: 25px;
+    }
+}
 ```
 
+**O que acontece neste código:**
+- **Composição Híbrida**: `page.js` é renderizado no servidor e delega a interatividade aos componentes `<Contador />` e `<Carrossel />`.
+- **Sobreposição e Detalhes Geométricos**: `.img_estatua_sobreposta` usa `position: absolute` para se destacar sobre o hero, enquanto `.img_advogada::after` e `.caso_card::after` desenham triângulos decorativos nos cantos superiores direitos.
+
+---
+
+### **2. Página Sobre (`/sobre`)**
+- **Arquivo**: `src/app/sobre/page.js`
+- **Estilização**: `src/app/styles/sobre.module.css`
+- **Estrutura**: Apresenta a trajetória da Dra. Luciana, indicadores de credibilidade (`+100 Casos resolvidos` e `5 Anos de carreira`), retrato profissional e cards com as especialidades jurídicas.
+
+```jsx
 import styles from "../styles/sobre.module.css";
 
 export default function Sobre() {
@@ -673,7 +2206,6 @@ export default function Sobre() {
                         Contato
                     </a>
                     <section className={styles.estatisticas}>
-                        <div className={styles.linha}></div>
 
                         <article className={styles.estatistica}>
                             <strong className={styles.numero_estatistica}>
@@ -689,7 +2221,6 @@ export default function Sobre() {
                             <span>Anos de carreira</span>
                         </article>
 
-                        <div className={styles.linha}></div>
                     </section>
                 </article>
 
@@ -784,126 +2315,1078 @@ export default function Sobre() {
 }
 ```
 
-### 3. Página de Contato (/contato)
-- Arquivo: src/app/contato/page.js
-- Estilização: src/app/contato.module.css
-- Projetada para estreitar os canais de comunicação com os clientes. Contém informações estruturadas de atendimento (telefone, e-mail e endereço físico), ícones de redirecionamento para redes sociais e um formulário interativo de agendamento de consultas.
+**Estilização (`src/app/styles/sobre.module.css`):**
 
+```css
+.sobre {
+    min-height: 570px;
+    background-color: #FFF2D2;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.sobre_texto {
+    width: 520px;
+}
+
+.sobre_titulo {
+    color: #6F1D1B;
+    font-family: 'Source Serif 4', serif;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.linha {
+    width: 55px;
+    height: 2px;
+    background-color: #BB9457;
+    margin: 12px 0 28px;
+}
+
+.sobre_descricao {
+    color: #4a241b;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botao_contato {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 11px 22px;
+    background-color: #6F1D1B;
+    color: #FFF2D2;
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botao_contato::after {
+    content: " →";
+}
+
+.botao_contato:hover {
+    background-color: #5a1715;
+}
+
+.img_advogada {
+    width: 440px;
+    height: 470px;
+    background-color: #d3d3d3;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 8px 22px rgba(67, 40, 24, 0.16);
+}
+
+.img_advogada::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 45px solid #BB9457;
+    border-left: 45px solid transparent;
+}
+
+.img_advogada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.estatisticas {
+    min-height: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 38px;
+    padding: 20px 0;
+    border-top: 2px solid #BB9457;
+    border-bottom: 2px solid #BB9457;
+}
+
+.estatisticas .linha {
+    width: 2px;
+    height: 65px;
+    margin: 0;
+    background-color: #BB9457;
+}
+
+.estatistica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #6F1D1B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.numero_estatistica {
+    font-family: 'Source Serif 4', serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+.areas_atuacao {
+    background-color: #F7E6C2;
+    padding: 60px 8% 70px;
+    border-top: 1px solid rgba(111, 29, 27, 0.12);
+}
+
+.container_areas {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.titulo_areas {
+    color: #432818;
+    font-family: 'Source Serif 4', serif;
+    font-size: 32px;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.cartao {
+    width: 250px;
+    height: 310px;
+    background-color: #FFF9EC;
+    border: 1px solid #6F1D1B54;
+    border-radius: 4px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(74, 36, 27, 0.12);
+}
+
+.icone_cartao {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 25px;
+}
+
+.titulo_cartao {
+    width: 150px;
+    color: #6F1D1B;
+    font-family: 'Source Serif 4', serif;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.descricao_cartao {
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.link_cartao {
+    margin-top: auto;
+    color: #6F1D1B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link_cartao::after {
+    content: " →";
+}
+
+.link_cartao:hover {
+    color: #432818;
+}
+
+
+@media (max-width: 768px) {
+
+    .sobre {
+        min-height: auto;
+        padding: 50px 20px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sobre_texto {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .sobre_titulo {
+        font-size: 32px;
+    }
+
+    .sobre_descricao {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .botao_contato {
+        margin-top: 25px;
+    }
+
+    .img_advogada {
+        width: 100%;
+        max-width: 380px;
+        height: 420px;
+    }
+
+    .estatisticas {
+        grid-template-columns: 1fr 1fr;
+        min-height: auto;
+        gap: 20px;
+        margin-top: 35px;
+        padding: 20px 0;
+    }
+
+    .estatisticas .linha {
+        display: none;
+    }
+
+    .estatistica {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .numero_estatistica {
+        font-size: 28px;
+    }
+
+    .areas_atuacao {
+        padding: 50px 20px;
+    }
+
+    .titulo_areas {
+        font-size: 28px;
+    }
+
+    .container_cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 290px;
+    }
+
+}
 ```
+
+**O que acontece neste código:**
+- **Contraste de Seções**: Alterna o bege claro (`#FFF2D2`) da apresentação biográfica com o tom dourado suave (`#F7E6C2`) da grade de especialidades, emoldurando as métricas com bordas douradas de `2px`.
+
+---
+
+### **3. Página de Contato (`/contato`)**
+- **Arquivo**: `src/app/contato/page.js`
+- **Estilização**: `src/app/styles/contato.module.css`
+- **Estrutura**: Combina um banner hero otimizado com `next/image`, um cartão sobreposto com os canais de atendimento (telefone, e-mail, endereço e redes sociais) e o componente interativo `<Form />`.
+
+```jsx
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import styles from '../styles/contato.module.css';
+import Form from '../components/form/form';
 
 export default function Contato() {
-  return (
-    <>
-      <Header />
-
-      <section className="hero_contato w-full h-[350px] md:h-[485px] relative overflow-hidden flex items-center justify-center text-center">
-        <Image 
-          src="/img/background-contato.png" 
-          alt="Livros e símbolo da justiça" 
-          fill 
-          priority 
-          className="object-cover object-center absolute z-0" 
-        />
-        <div className="absolute inset-0 bg-[#281711]/[0.48] z-1" />
-        <div className="hero_conteudo relative z-2 text-white px-5 mt-0 md:-mt-[50px]">
-          <h1 className="font-['Source_Serif_4'] text-[38px] md:text-[58px] font-bold mb-[15px]">Entre em contato!</h1>
-          <p className="max-w-[750px] text-[14px] md:text-[16px] font-medium leading-[1.6] mx-auto">
-            Entre em contato e agende uma conversa para entender seus direitos e encontrar o melhor caminho para o seu caso.
-          </p>
-        </div>
-      </section>
-
-      <main>
-        <section className="area-contato bg-[#FFF2D2] pb-[100px]">
-          <div className="container-contato w-[90%] md:w-[78%] max-w-[1100px] min-h-[620px] -mt-[70px] md:-mt-[110px] mx-auto relative z-3 bg-[#fff1cf] rounded-[14px] shadow-[0_3px_8px_rgba(0,0,0,0.20)] grid grid-cols-1 md:grid-cols-[1fr_1.25fr] p-[35px_25px] md:p-[52px_50px]">
-            
-            <div className="informacoes pr-0 md:pr-[45px] pb-[35px] md:pb-0 border-b md:border-b-0 md:border-r border-[#8a6257]">
-              <h2 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[24px] md:text-[28px] font-bold leading-[1.25] mb-[14px]">Informações de contato</h2>
-              <p className="descricao text-[13px] leading-[1.5] mb-[30px]">
-                Precisa de orientação? Estamos prontas para ouvir você.
-              </p>
-
-              <div className="informacao flex items-center gap-[15px] mb-[27px]">
-                <Link href="#"><Image src="/img/Telefone.png" alt="Telefone" width={48} height={48} className="w-[48px] h-[48px] object-contain" /></Link>
-                <div className="texto-informacao">
-                  <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[17px] font-normal mb-[3px]">Telefone</h3>
-                  <p className="text-[13px]">(11) 9999-9999</p>
+    return (
+        <>
+            <section className={styles.hero_contato}>
+                <Image alt="Livros e símbolo da justiça" height="{485}" priority src="/img/background-contato.png" width="{1920}"/>
+                <div className={styles.hero_conteudo}>
+                    <h1>Entre em contato!</h1>
+                    <p>
+                        Entre em contato e agende uma conversa para entender seus direitos e encontrar o melhor caminho para o seu caso.
+                    </p>
                 </div>
-              </div>
+            </section>
 
-              <div className="informacao flex items-center gap-[15px] mb-[27px]">
-                <Link href="#"><Image src="/img/E-mail.png" alt="E-mail" width={48} height={48} className="w-[48px] h-[48px] object-contain" /></Link>
-                <div className="texto-informacao">
-                  <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[17px] font-normal mb-[3px]">Email</h3>
-                  <p className="text-[13px]">exemplo@contato.com</p>
-                </div>
-              </div>
+            <main>
+                <section className={styles.area_contato}>
+                    <div className={styles.container_contato}>
 
-              <div className="informacao flex items-center gap-[15px] mb-[27px]">
-                <Link href="#"><Image src="/img/Localização.png" alt="Endereço" width={48} height={48} className="w-[48px] h-[48px] object-contain" /></Link>
-                <div className="texto-informacao">
-                  <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[17px] font-normal mb-[3px]">Endereço</h3>
-                  <p className="text-[13px]">Rua Exemplo, Nº 123</p>
-                </div>
-              </div>
+                        <div className={styles.informacoes}>
+                            <h2>Informações de contato</h2>
+                            <p className={styles.descricao}>
+                                Precisa de orientação? Estamos prontas para ouvir você.
+                            </p>
 
-              <div className="redes mt-[32px]">
-                <h3 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[16px] mb-[12px]">Siga minhas redes sociais</h3>
-                <div className="redes-icons flex gap-[20px]">
-                  <Link href="#" className="w-[31px] h-[31px] flex items-center justify-center rounded-full bg-[#6F1D1B] text-white hover:bg-[#5a1715] hover:-translate-y-0.5 transition-all"><Image src="/img/Instagram.png" alt="Instagram" width={31} height={31} className="w-[31px] h-[31px] object-contain" /></Link>
-                  <Link href="#" className="w-[31px] h-[31px] flex items-center justify-center rounded-full bg-[#6F1D1B] text-white hover:bg-[#5a1715] hover:-translate-y-0.5 transition-all"><Image src="/img/Twitter.png" alt="Twitter" width={31} height={31} className="w-[31px] h-[31px] object-contain" /></Link>
-                  <Link href="#" className="w-[31px] h-[31px] flex items-center justify-center rounded-full bg-[#6F1D1B] text-white hover:bg-[#5a1715] hover:-translate-y-0.5 transition-all"><Image src="/img/Facebook (1).png" alt="Facebook" width={31} height={31} className="w-[31px] h-[31px] object-contain" /></Link>
-                </div>
-              </div>
-            </div>
+                            <div className={styles.informacao}>
+                                <Link href="#"><Image alt="Telefone" height="{48}" src="/img/Telefone.png" width="{48}"/></Link>
+                                <div className={styles.texto_informacao}>
+                                    <h3>Telefone</h3>
+                                    <p>(11) 9999-9999</p>
+                                </div>
+                            </div>
 
-            <div className="formulario pl-0 md:pl-[50px] pt-[35px] md:pt-0">
-              <h2 className="font-['Source_Serif_4'] text-[#6F1D1B] text-[24px] md:text-[28px] font-bold mb-[28px]">Agende uma consulta</h2>
+                            <div className={styles.informacao}>
+                                <Link href="#"><Image alt="E-mail" height="{48}" src="/img/E-mail.png" width="{48}"/></Link>
+                                <div className={styles.texto_informacao}>
+                                    <h3>Email</h3>
+                                    <p>exemplo@contato.com</p>
+                                </div>
+                            </div>
 
-              <form onSubmit={(e) => e.preventDefault()}>
-                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                  <i className="fa-regular fa-user text-[15px] text-[#222] shrink-0"></i>
-                  <input type="text" name="nome" placeholder="Nome" required className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
-                </div>
+                            <div className={styles.informacao}>
+                                <Link href="#"><Image alt="Endereço" height="{48}" src="/img/Localização.png" width="{48}"/></Link>
+                                <div className={styles.texto_informacao}>
+                                    <h3>Endereço</h3>
+                                    <p>Rua Exemplo, Nº 123</p>
+                                </div>
+                            </div>
 
-                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                  <i className="fa-regular fa-envelope text-[15px] text-[#222] shrink-0"></i>
-                  <input type="email" name="email" placeholder="Email" required className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
-                </div>
+                            <div className={styles.redes}>
+                                <h3>Siga minhas redes sociais</h3>
+                                <div className={styles.redes_icons}>
+                                    <Link href="#"><Image alt="Instagram" height="{31}" src="/img/Instagram.png" width="{31}"/></Link>
+                                    <Link href="#"><Image alt="Twitter" height="{31}" src="/img/Twitter.png" width="{31}"/></Link>
+                                    <Link href="#"><Image alt="Facebook" height="{31}" src="/img/Facebook (1).png" width="{31}"/></Link>
+                                </div>
+                            </div>
+                        </div>
 
-                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                  <i className="fa-solid fa-phone text-[15px] text-[#222] shrink-0"></i>
-                  <input type="tel" name="telefone" placeholder="Telefone" className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
-                </div>
+                        <Form/>
 
-                <div className="campo w-full h-[43px] flex items-center gap-[13px] px-[17px] mb-[23px] bg-white rounded-[4px]">
-                  <i className="fa-regular fa-calendar text-[15px] text-[#222] shrink-0"></i>
-                  <input type="date" name="data" className="w-full h-full border-none outline-none bg-transparent font-['Poppins'] text-[13px] text-[#333] placeholder:text-[#333]" />
-                </div>
-
-                <div className="campo mensagem w-full h-[100px] flex items-start gap-[13px] px-[17px] pt-[14px] mb-[23px] bg-white rounded-[4px]">
-                  <i className="fa-regular fa-comment text-[15px] text-[#222] shrink-0"></i>
-                  <textarea name="mensagem" placeholder="Mensagem" className="w-full h-[75px] border-none outline-none resize-none font-['Poppins'] text-[13px] bg-transparent text-[#333] placeholder:text-[#333]"></textarea>
-                </div>
-
-                <div className="area-botao flex justify-center md:justify-end">
-                  <button type="submit" className="border-none bg-[#6F1D1B] text-white py-[11px] px-[22px] rounded-[5px] font-['Source_Serif_4'] font-bold cursor-pointer transition-all hover:bg-[#5a1715]">
-                    Enviar
-                  </button>
-                </div>
-              </form>
-            </div>
-
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
-  );
+                    </div>
+                </section>
+            </main>
+        </>
+    );
 }
+```
+
+**Estilização (`src/app/styles/contato.module.css`):**
+
+```css
+/* Formulário */
+.hero_contato {
+    width: 100%;
+    height: 485px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero_contato img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.hero_contato::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(40, 23, 17, 0.48);
+    z-index: 1;
+}
+
+.hero_conteudo {
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin-top: -50px;
+    padding: 0 20px;
+}
+
+.hero_conteudo h1 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 58px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero_conteudo p {
+    max-width: 750px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.area_contato {
+    background-color: #FFF2D2;
+    padding-bottom: 100px;
+}
+
+.container_contato {
+    width: 78%;
+    max-width: 1100px;
+    min-height: 620px;
+    margin: -110px auto 0;
+    position: relative;
+    z-index: 3;
+    background-color: #fff1cf;
+    border-radius: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20);
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    padding: 52px 50px;
+}
+
+.informacoes {
+    padding-right: 45px;
+    border-right: 1px solid #8a6257;
+}
+
+.informacoes h2 {
+    font-family: 'Source Serif 4', serif;
+    color: #6F1D1B;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.descricao {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.informacao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 27px;
+}
+
+.informacao img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.texto_informacao h3 {
+    font-family: 'Source Serif 4', serif;
+    color: #6F1D1B;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.texto_informacao p {
+    font-size: 13px;
+}
+
+.redes {
+    margin-top: 32px;
+}
+
+.redes h3 {
+    font-family: 'Source Serif 4', serif;
+    color: #6F1D1B;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.redes_icons {
+    display: flex;
+    gap: 20px;
+}
+
+.redes_icons a {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #6F1D1B;
+    color: white;
+    transition: 0.3s;
+}
+
+.redes_icons a:hover {
+    background-color: #5a1715;
+    transform: translateY(-2px);
+}
+
+.redes_icons img {
+    width: 31px;
+    height: 31px;
+    object-fit: contain;
+}
+
+.formulario {
+    padding-left: 50px;
+}
+
+.formulario h2 {
+    font-family: 'Source Serif 4', serif;
+    color: #6F1D1B;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.campo {
+    width: 100%;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 17px;
+    margin-bottom: 23px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.campo i {
+    font-size: 15px;
+    color: #222;
+    flex-shrink: 0;
+}
+
+.campo input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+
+.campo input::placeholder {
+    color: #333;
+}
+
+.mensagem {
+    height: 100px;
+    align-items: flex-start;
+    padding-top: 14px;
+}
+
+.campo textarea {
+    width: 100%;
+    height: 75px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    background: transparent;
+    color: #333;
+}
+
+.campo textarea::placeholder {
+    color: #333;
+}
+
+.area_botao {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.area_botao button {
+    border: none;
+    background-color: #6F1D1B;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 5px;
+    font-family: 'Source Serif 4', serif;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.area_botao button:hover {
+    background-color: #5a1715;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero_contato {
+        height: 350px;
+    }
+
+    .hero_conteudo {
+        margin-top: 0;
+    }
+
+    .hero_conteudo h1 {
+        font-size: 38px;
+    }
+
+    .hero_conteudo p {
+        font-size: 14px;
+    }
+
+    .container_contato {
+        width: 90%;
+        margin-top: -70px;
+        grid-template-columns: 1fr;
+        padding: 35px 25px;
+    }
+
+    .informacoes {
+        padding-right: 0;
+        padding-bottom: 35px;
+        border-right: none;
+        border-bottom: 1px solid #8a6257;
+    }
+
+    .formulario {
+        padding-left: 0;
+        padding-top: 35px;
+    }
+
+    .informacoes h2,
+    .formulario h2 {
+        font-size: 24px;
+    }
+
+    .area_botao {
+        justify-content: center;
+    }
+}
+```
+
+**O que acontece neste código:**
+- **Cartão Sobreposto (`.container_contato`)**: Usa margem superior negativa (`margin: -110px auto 0`) e `z-index: 3` para sobrepor o cartão de contato ao banner hero, enquanto `.hero_contato::after` aplica uma máscara escura para legibilidade do título.
+
+---
+
+### **4. Página Dinâmica de Casos Resolvidos (`/casos_resolvidos/[slug]`)**
+- **Arquivo**: `src/app/casos_resolvidos/[slug]/page.jsx`
+- **Estilização**: `src/app/casos_resolvidos/[slug]/caso.module.css`
+- **Estrutura**: Captura o parâmetro `slug` da URL, busca os detalhes na API dinâmica (`/api/casos/${slug}`) e permite navegar entre três abas reativas (*Descrição*, *Resultado* e *Feedback do Cliente*).
+
+```jsx
+"use client";
+
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import styles from "./caso.module.css";
+
+export default function CasoPage() {
+    const { slug } = useParams();
+
+    const [caso, setCaso] = useState(null);
+    const [carregando, setCarregando] = useState(true);
+    const [abaAtiva, setAbaAtiva] = useState("descricao");
+
+    useEffect(() => {
+        fetch(`/api/casos/${slug}`)
+            .then((res) => (res.ok ? res.json() : null))
+            .then((dados) => setCaso(dados))
+            .finally(() => setCarregando(false));
+    }, [slug]);
+
+    if (carregando) {
+        return <div>Carregando...</div>;
+    }
+
+    if (!caso) {
+        return <div>Conteúdo não encontrado.</div>;
+    }
+
+    return (
+        <main className={styles.pagina_caso}>
+
+            <section className={styles.caso_container}>
+
+                <div className={styles.caso_imagem}>
+                    <img
+                        src={caso.img}
+                        alt={caso.titulo}
+                    />
+
+                    <div className={styles.detalhe_imagem}></div>
+                </div>
+
+                <article className={styles.caso_conteudo}>
+
+                    <div className={styles.caso_informacoes}>
+                        <span>Casos resolvidos</span>
+                        <span className={styles.separador}>•</span>
+                        <span>Área jurídica</span>
+                    </div>
+
+                    <h1 className={styles.caso_titulo}>
+                        {caso.titulo}
+                    </h1>
+
+                    <nav className={styles.caso_abas}>
+                        <button
+                            className={abaAtiva === "descricao" ? styles.aba_ativa : ""}
+                            onClick={() => setAbaAtiva("descricao")}
+                        >
+                            Descrição
+                        </button>
+
+                        <button
+                            className={abaAtiva === "resultado" ? styles.aba_ativa : ""}
+                            onClick={() => setAbaAtiva("resultado")}
+                        >
+                            Resultado
+                        </button>
+
+                        <button
+                            className={abaAtiva === "feedback" ? styles.aba_ativa : ""}
+                            onClick={() => setAbaAtiva("feedback")}
+                        >
+                            Feedback do Cliente
+                        </button>
+                    </nav>
+
+                    <div className={styles.caso_texto}>
+
+                        {abaAtiva === "descricao" && (
+                            <section>
+                                <h2>Desafio</h2>
+                                <p>{caso.desafio}</p>
+
+                                <h2>Estratégia Jurídica</h2>
+                                <ul>
+                                    {caso.estrategia.map((item) => (
+                                        <li key={item.titulo}>
+                                            <strong>{item.titulo}:</strong> {item.descricao}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        )}
+
+                        {abaAtiva === "resultado" && (
+                            <section>
+                                <h2>Resultado alcançado</h2>
+                                <p>{caso.resultado}</p>
+
+                                <h2>Impactos</h2>
+                                <ul>
+                                    {caso.impactos.map((item) => (
+                                        <li key={item.titulo}>
+                                            <strong>{item.titulo}:</strong> {item.descricao}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        )}
+
+                        {abaAtiva === "feedback" && (
+                            <section>
+                                <h2>Feedback do Cliente</h2>
+                                <p>{caso.feedback}</p>
+                            </section>
+                        )}
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </main>
+    );
+}
+```
+
+**Estilização (`src/app/casos_resolvidos/[slug]/caso.module.css`):**
+
+```css
+.pagina_caso {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* ESTRUTURA PRINCIPAL */
+
+.caso_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    min-height: 820px;
+}
+
+/* IMAGEM */
+
+.caso_imagem {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.caso_imagem img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.detalhe_imagem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #6F1D1B;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+/* CONTEÚDO */
+
+.caso_conteudo {
+    background-color: #FFF2D2;
+    padding: 55px 8%;
+    color: #432818;
+}
+
+.caso_informacoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #6F1D1B;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.separador {
+    color: #BB9457;
+}
+
+.caso_titulo {
+    font-family: "Source Serif 4", serif;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #432818;
+    margin-bottom: 25px;
+}
+
+/* ABAS */
+
+.caso_abas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #BB9457;
+    margin-bottom: 28px;
+}
+
+.caso_abas button {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 10px 3px 12px;
+    color: #BB9457;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.caso_abas button:hover {
+    color: #6F1D1B;
+}
+
+.caso_abas button.aba_ativa {
+    color: #6F1D1B;
+}
+
+.caso_abas button.aba_ativa::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #6F1D1B;
+}
+
+/* TEXTOS */
+
+.caso_texto {
+    font-family: "Poppins", sans-serif;
+    color: #25211e;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.caso_texto h2 {
+    position: relative;
+    display: table;
+    font-family: "Source Serif 4", serif;
+    font-size: 20px;
+    color: #6F1D1B;
+    margin: 25px 0 15px;
+}
+
+.caso_texto h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 65%;
+    height: 1px;
+    background-color: #BB9457;
+}
+
+.caso_texto p {
+    margin-bottom: 12px;
+}
+
+.caso_texto ul {
+    padding-left: 17px;
+    margin-top: 15px;
+}
+
+.caso_texto li {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.caso_texto li::marker {
+    color: #6F1D1B;
+}
+
+.caso_texto strong {
+    color: #6F1D1B;
+    font-weight: 600;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .caso_container {
+        grid-template-columns: 38% 62%;
+    }
+
+    .caso_conteudo {
+        padding: 40px 6%;
+    }
+
+    .caso_titulo {
+        font-size: 26px;
+    }
+
+    .caso_abas {
+        gap: 8px;
+    }
+
+    .caso_abas button {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .caso_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caso_imagem {
+        height: 400px;
+        min-height: auto;
+    }
+
+    .caso_imagem img {
+        position: absolute;
+    }
+
+    .caso_conteudo {
+        padding: 40px 25px 55px;
+    }
+
+    .caso_titulo {
+        font-size: 27px;
+    }
+
+    .caso_abas {
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    .caso_abas button {
+        flex-shrink: 0;
+    }
+
+    .caso_texto {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caso_imagem {
+        height: 300px;
+    }
+
+    .caso_conteudo {
+        padding: 30px 20px 45px;
+    }
+
+    .caso_titulo {
+        font-size: 24px;
+    }
+}
+```
+
+**O que acontece neste código:**
+- **`useParams()` e Consumo Dinâmico**: Captura o `slug` da rota, consulta `/api/casos/${slug}` via `useEffect`, trata estados de carregamento/erro (`404`) e alterna entre as abas (`abaAtiva`) percorrendo `caso.estrategia` e `caso.impactos` com `.map()`.
+- **Layout Assimétrico (`40% / 60%`)**: Divide a tela entre a fotografia (com triângulo decorativo via `clip-path: polygon(...)`) e a área de leitura em bege (`#FFF2D2`), habilitando rolagem horizontal nas abas em telas menores que `768px`.
+
+---
+
+## ▶️ Como Executar o Projeto Localmente
+
+Siga os comandos abaixo no terminal dentro da pasta `projeto_borboleta` para rodar a aplicação em ambiente de desenvolvimento:
+
+```bash
+# 1. Instalar as dependências do projeto
+npm install
+
+# 2. Iniciar o servidor de desenvolvimento do Next.js
+npm run dev
+
+# 3. Acessar no navegador:
+# Página Inicial:        http://localhost:3000
+# Página Sobre:          http://localhost:3000/sobre
+# Página de Contato:     http://localhost:3000/contato
+# Exemplo de Caso:       http://localhost:3000/casos_resolvidos/quebra-de-contrato
+# API de Casos (GET):    http://localhost:3000/api/casos
 ```
